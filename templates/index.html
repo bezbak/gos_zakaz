@@ -1,0 +1,331 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+  {% include 'includes/header.html' %}
+
+  <div class="banner"></div>
+  <div class="containerr">
+    <div class="container__inner">
+      <h2 class="titles">- Главные события</h2>
+
+      <!-- КАРУСЕЛ - #1 -->
+      <div id="carouselExampleIndicators" class="carousel slide sliderrr">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            class="active borderBtn" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+            class="borderBtn"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+            class="borderBtn"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-block w-100 contentSlider">
+              <div class="contentSlider__items">
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬇️⬇️⬇️ -->
+                <h3 class="contentSlider__items-date"><b class="datesBlue">07</b> ИЮЛЯ</h3>
+                <div class="contentSlider__items-top">
+                  <img src="{% static 'allimages/carousel big.png'%}" class="items-big" alt="">
+                  <div class="items-small">
+                    <img src="{% static 'allimages/carousel small 1.png'%}" alt="">
+                    <img src="{% static 'allimages/carouselsmall1.png'%}" alt="">
+                  </div>
+                </div>
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
+                <div class="contentSlider__items-bottom">
+                  Глава Кабмина Акылбек Жапаров и Председатель Генерального совета Либерально-демократической партии
+                  Тосиаки Эндо обсудили вопросы двустороннего сотрудничества
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-block w-100 contentSlider">
+              <div class="contentSlider__items">
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬇️⬇️⬇️ -->
+                <h3 class="contentSlider__items-date"><b class="datesBlue">07</b> ИЮЛЯ</h3>
+                <div class="contentSlider__items-top">
+                  <img src="{% static 'allimages/carousel big.png'%}" class="items-big" alt="">
+                  <div class="items-small">
+                    <img src="{% static 'allimages/carousel small 1.png'%}" alt="">
+                    <img src="{% static 'allimages/carouselsmall1.png'%}" alt="">
+                  </div>
+                </div>
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
+                <div class="contentSlider__items-bottom">
+                  Глава Кабмина Акылбек Жапаров и Председатель Генерального совета Либерально-демократической партии
+                  Тосиаки Эндо обсудили вопросы двустороннего сотрудничества
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-block w-100 contentSlider">
+              <div class="contentSlider__items">
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬇️⬇️⬇️ -->
+                <h3 class="contentSlider__items-date"><b class="datesBlue">07</b> ИЮЛЯ</h3>
+                <div class="contentSlider__items-top">
+                  <img src="{% static 'allimages/carousel big.png'%}" class="items-big" alt="">
+                  <div class="items-small">
+                    <img src="{% static 'allimages/carousel small 1.png'%}" alt="">
+                    <img src="{% static 'allimages/carouselsmall1.png'%}" alt="">
+                  </div>
+                </div>
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
+                <div class="contentSlider__items-bottom">
+                  Глава Кабмина Акылбек Жапаров и Председатель Генерального совета Либерально-демократической партии
+                  Тосиаки Эндо обсудили вопросы двустороннего сотрудничества
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- КАРУСЕЛ - #1 -->
+      <div class="slider">
+        <div class="slider__item flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="slider__item flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="slider__item flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="slider__item flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="slider__item flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="slider__item flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="slider__item flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+      </div>
+      <!-- КАРУСЕЛ - #1 -->
+
+      <h2 class="titles ">- Новости месяца</h2>
+      <div class="flexParent">
+        <div class="flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+        <div class="flexParent__items">
+          <img src="{% static 'allimages/par.png'%}" alt="">
+          <div class="flexParent__items-bottom">
+            <span>
+              <b class="datesBlue">07</b>
+              <p>Июль</p>
+              <p>2023</p>
+            </span>
+            <p class="flexParent__items-bottom-desc">Накануне, Председатель Кабинета Министров Кыргызской Республики –
+              Руководитель Администрации Президента Кыргызской Республики </p>
+          </div>
+        </div>
+
+      </div>
+
+      <h2 class="titles ">- Фотогалерея</h2>
+      <!-- КАРУСЛЕЬ №2 -->
+      <div class="slider">
+        <div class="slider__item lastItems">
+          <img src="{% static 'allimages/imglast.png'%}" alt="">
+        </div>
+        <div class="slider__item lastItems">
+          <img src="{% static 'allimages/imglast.png'%}" alt="">
+        </div>
+        <div class="slider__item lastItems">
+          <img src="{% static 'allimages/imglast.png'%}" alt="">
+        </div>
+        <div class="slider__item lastItems">
+          <img src="{% static 'allimages/imglast.png'%}" alt="">
+        </div>
+        <div class="slider__item lastItems">
+          <img src="{% static 'allimages/imglast.png'%}" alt="">
+        </div>
+        <div class="slider__item lastItems">
+          <img src="{% static 'allimages/imglast.png'%}" alt="">
+        </div>
+        <div class="slider__item lastItems">
+          <img src="{% static 'allimages/imglast.png'%}" alt="">
+        </div>
+      </div>
+      <!-- КАРУСЛЕЬ №2 -->
+      <h2 class="titles befores">- Быстрые ссылки</h2>
+      <div class="flexParent gap ">
+        <div class="flexParent__items itemsLinks">
+          <h2>Задайте вопрос</h2>
+          <a href="http://www.kattar.kg/kg/" class="itemsLinks__linksBase"> <img src="{% static 'allimages/Gerb.png'%}" alt="">
+            kattar.kg</a>
+        </div>
+        <div class="flexParent__items itemsLinks">
+          <h2>Образование</h2>
+          <a href="https://edu.gov.kg/" class="itemsLinks__linksBase"><img class="choon" src="{% static 'allimages/abi.png'%}"
+              alt=""> edu.gov.kg</a>
+        </div>
+        <div class="flexParent__items itemsLinks">
+          <h2>Государственные органы</h2>
+          <a href="" class="itemsLinks__linksBase"> <img src="{% static 'allimages/redGerb.png'%}" alt=""> Президент </a>
+          <a href="" class="itemsLinks__linksBase"> <img src="{% static 'allimages/Gerb.png'%}" alt=""> Верховный Совет </a>
+          <a href="http://cbd.minjust.gov.kg/ru-ru/npakr/Search" class="itemsLinks__linksBase"> <img
+              src="{% static 'allimages/ciniy.png'%}" alt=""> Централизованный банк правовой информации </a>
+        </div>
+
+        <div class="flexParent__items itemsLinks">
+          <h2>Туризм в Кыргызстане</h2>
+          <a href="https://www.discoverkyrgyzstan.org/" class="itemsLinks__linksBase"> <img class="choon"
+              src="{% static 'allimages/kraska.png'%}" alt="">discoverykyrgyzstan.org</a>
+          <a href="https://tourism.gov.kg/" class="itemsLinks__linksBase"> <img class="choon"
+              src="{% static 'allimages/kraska.png'%}" alt="">tourism.gov.kg</a>
+          <a href="https://www.evisa.e-gov.kg/" class="itemsLinks__linksBase"> <img class="choon"
+              src="{% static 'allimages/evisa.png'%}" alt="">evisa.e-gov.kg</a>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  {% include 'includes/footer.html' %}
+
+
+{% endblock content %}
