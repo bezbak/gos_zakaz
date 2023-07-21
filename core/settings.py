@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     #!apps
     'apps.news',
     'apps.team',
+    'apps.gallery',
 ]
 
 MIDDLEWARE = [
