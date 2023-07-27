@@ -51,8 +51,9 @@
                 <div class="contentSlider__items-top">
                   <img src="{{slider__item.image.url}}" class="items-big" alt="">
                   <div class="items-small">
-                    <img src="{% static 'allimages/carousel small 1.png'%}" alt="">
-                    <img src="{% static 'allimages/carouselsmall1.png'%}" alt="">
+                    {% for image in slider__item.media.all %}
+                    <img src="{{image.image.url}}" alt="">
+                    {% endfor %}
                   </div>
                 </div>
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
