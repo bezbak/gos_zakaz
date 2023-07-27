@@ -1,14 +1,34 @@
+const accordionItems = document.querySelectorAll('.accordion-itembek');
+
+accordionItems.forEach(item => {
+  const header = item.querySelector('.accordion-headerbek');
+  const content = item.querySelector('.accordion-contentbek');
+
+  header.addEventListener('click', () => {
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
 document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('burger').addEventListener('click',()=>{
+    document.querySelector('.one').classList.toggle('top_span')
+    document.querySelector('.two').classList.toggle('m_span')
+    document.querySelector('.three').classList.toggle('b_span')
+    document.querySelector('.burgerMenu').classList.toggle('burgerMenu__active')
+  })
+  document.getElementById('app').addEventListener('click',()=>{
+    document.querySelector('.apparat').classList.toggle('apparat__acitve')
+})
     document.getElementById('pagelinkBtn').addEventListener('click',()=>{
         document.querySelector('.fixedNav').classList.toggle('fixedNav__avtive')
     })
     document.querySelector('.banner').addEventListener('click',()=>{
         document.querySelector('.fixedNav').classList.remove('fixedNav__avtive')
     })
-    document.querySelector('.container').addEventListener('click',()=>{
-        document.querySelector('.fixedNav').classList.remove('fixedNav__avtive')
-    })
-
+    // document.querySelector('.container').addEventListener('click',()=>{
+    //     document.querySelector('.fixedNav').classList.remove('fixedNav__avtive')
+    // })
+ 
 })
 let docTitle = document.title;
 window.addEventListener('blur',()=>{
@@ -17,6 +37,7 @@ window.addEventListener('blur',()=>{
 window.addEventListener('focus',()=>{
     document.title = docTitle;
 })
+
 
 
 const slider = document.querySelector('.slider'); 

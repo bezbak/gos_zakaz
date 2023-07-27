@@ -1,33 +1,85 @@
 {% load static %}
 <header class="header">
-    <nav class="header__menu">
-      <div id="pagelinkBtn">
-        <a href="#">АППП КР Ош обл.</a>
-        <img src="{% static 'allimages/Vector.png'%}" alt="vector">
-        <div class="fixedNav">
-          <a href="#">Ош<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-          <a href="#">Алай<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-          <a href="#">Араван<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-          <a href="#">Кара-Кулжа<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-          <a href="#">Кара-Суу<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-          <a href="#">Ноокат<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-          <a href="#">Узген<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-          <a href="#">Чон-Алай<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+  <nav class="header__menu">
+    <div id="pagelinkBtn">
+      <a href="#">АППП КР Ош обл.</a>
+      <img src="{% static 'allimages/Vector.png'%}" alt="vector">
+      <div class="fixedNav">
+        <a href="#">Ош<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+        <a href="#">Алай<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+        <a href="#">Араван<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+        <a href="#">Кара-Кулжа<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+        <a href="#">Кара-Суу<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+        <a href="#">Ноокат<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+        <a href="#">Узген<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+        <a href="#">Чон-Алай<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+      </div>
+    </div>
+    <a href="{% url 'index' %}" class="header__menu-links adaps">Главная</a>
+    <a href="{% url 'all_news' %}" class="header__menu-links adaps">Новости</a>
+    <div href="" class="header__menu-links adaps" id="app">Аппарат
+      <img src="{% static 'allimages/Vector fff.png'%}" alt="">
+      <div class="apparat">
+        <a href="#">Основная информация</a>
+        <a href="#">Руководство</a>
+        <a href="#">Структура</a>
+        <a target="_blank"
+          href="https://2gis.kg/osh/firm/70000001030889233/72.804408%2C40.517214?m=72.80609%2C40.515669%2F16.09">Карты</a>
+      </div>
+    </div>
+
+    <a href="https://portal.tunduk.kg/feedback/show" target="_blank" clss="header__menu-links adaps" id="oso" >
+
+      Обращение граждан
+      <!--
+       <img src="{% static 'allimages/Vector fff.png'%}" alt="">
+       <div class="apparat2">
+        <a href="#"></a>
+      </div> -->
+    </a>
+    <a href="" class="header__menu-links adaps">Для туристов</a>
+    <a href="#contacts" class="header__menu-links adaps">Контакты</a>
+    <form action="{% url 'search' %}">
+      <div class="header__menu-search gl">
+        <img src="{% static 'allimages/liupa.png'%}" alt="">
+        <input name="search_key" type="text">
+      </div>
+    </form>
+  </nav>
+  <nav class="header__menu socials">
+    <img src="{% static 'allimages/instagtam.png'%}" alt="">
+    <img src="{% static 'allimages/faceBook.png'%}" alt="">
+    <img src="{% static 'allimages/TikTok.png'%}" alt="">
+    <span class="socials__span">
+      <img src="{% static 'allimages/RU - Russian Federation.png'%}" alt="">
+      <img src="{% static 'allimages/Vector fff.png'%}" class="vector" alt="">
+    </span>
+  </nav>
+  <button class="burger__btn" id="burger">
+    <span class="one"></span><span class="two"></span><span class="three"></span>
+</button>
+</header>
+<div class="burgerMenu">
+  <a href="#" class="header__menu-links">Главная</a>
+  <a href="" class="header__menu-links">Новости</a>
+  <div href="" class="accordionbek" id="app">
+      <div class="accordion-itembek">
+        <div class="accordion-headerbek">Аппарат <img src="{% static 'allimages/Vector fff.png'%}" alt=""></div>
+        <div class="accordion-contentbek">
+            <a href="#">Руководство</a>
+            <a href="#">Структура</a>
+            <a target="_blank"href="https://2gis.kg/osh/firm/70000001030889233/72.804408%2C40.517214?m=72.80609%2C40.515669%2F16.09">Карты</a>
+       
         </div>
       </div>
-      <a href="" class="header__menu-links">Главная</a>
-      <a href="" class="header__menu-links">Новости</a>
-      <a href="" class="header__menu-links">Аппарат <img src="{% static 'allimages/Vector fff.png'%}" alt=""> </a>
-      <a href="" clss="header__menu-links " id="oso">Обращение граждан <img src="{% static 'allimages/Vector fff.png'%}" alt="">
-      </a>
-      <a href="" class="header__menu-links">Для туристов</a>
-      <a href="" class="header__menu-links">Контакты</a>
-      <div class="header__menu-search">
-        <img src="{% static 'allimages/liupa.png'%}" alt="">
-        <input type="text">
-      </div>
-    </nav>
-    <nav class="header__menu socials">
+    
+  </div>
+
+    <a href="https://portal.tunduk.kg/feedback/show" target="_blank" clss="header__menu-links " id="oso_burger">Обращение граждан</a>
+  
+    <a href="" class="header__menu-links">Для туристов</a>
+    <a href="#contacts" class="header__menu-links">Контакты</a>
+    <nav class="header__menu socials socials_b">
       <img src="{% static 'allimages/instagtam.png'%}" alt="">
       <img src="{% static 'allimages/faceBook.png'%}" alt="">
       <img src="{% static 'allimages/TikTok.png'%}" alt="">
@@ -37,4 +89,4 @@
       </span>
     </nav>
 
-  </header>
+</div>

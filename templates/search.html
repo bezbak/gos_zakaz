@@ -1,0 +1,27 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+  {% include 'includes/header.html' %}
+  <div class="containerr">
+        <div class="container__inner pt50">
+            <div class="flexParent">
+                {% for news in news %}
+                <div class="flexParent__items">
+                    <img src="{{news.image.url}}" alt="">
+                    <div class="flexParent__items-bottom">
+                      <span>
+                        <b class="datesBlue">{{news.created|date:"d"}}</b>
+                        <p>{{news.created|date:"M"}}</p>
+                        <p>{{news.created|date:"Y"}}</p>
+                      </span>
+                      <a class="flexParent__items-bottom-desc">{{news.title}}</a>
+                    </div>
+                  </div>
+                  {% endfor %}
+              </div>
+        </div>
+    </div>
+{% include 'includes/footer.html' %}
+
+
+{% endblock content %}

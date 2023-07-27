@@ -24,3 +24,21 @@ class News(models.Model):
     class Meta:
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
+        
+class Media(models.Model):
+    image = models.ImageField(
+        'Доп фото для новости',
+        upload_to='news_images/'
+    )
+    news = models.ForeignKey(
+        News,
+        related_name='media',
+        on_delete=models.CASCADE,
+        verbose_name='Новость'
+    )
+    def __str__(self):
+        return f"Фото:{self.news.title} номер {self.id}"
+   
+    class Meta:
+        verbose_name = 'Доп фото новости'
+        verbose_name_plural = 'Доп фото новости'
