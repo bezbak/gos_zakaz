@@ -10,6 +10,9 @@ accordionItems.forEach(item => {
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('oso').addEventListener('click',()=>{
+    document.querySelector('.apparat2').classList.toggle('apparat2__active')
+  })
   document.getElementById('burger').addEventListener('click',()=>{
     document.querySelector('.one').classList.toggle('top_span')
     document.querySelector('.two').classList.toggle('m_span')

@@ -1,0 +1,28 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+  {% include 'includes/header.html' %}
+  <div class="containerr">
+    <div class="container__inner">
+
+        <div class="flexParent rukovod">
+          {% for team in team %}
+            <div class="flexParent__items footerItems rukovod__items ">
+                <img src="{{team.image.url}}" alt="">
+                <h3>{{team.full_name}}</h3>
+                <b>{{team.job_title}}</b>
+                
+                <a href="tel:{{team.phone}}"><img src="{% static 'allimages/IconЗрщту.png'%}" alt="">{{team.phone}}</a>
+                <a href="mailto:{{team.email}}"><img src="{% static 'allimages/soob.png'%}" alt="">{{team.email}}</a>
+
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+  </div>
+  {% include 'includes/footer.html' %}
+
+
+  {% endblock content %}

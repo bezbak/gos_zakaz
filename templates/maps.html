@@ -1,0 +1,22 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+  {% include 'includes/header.html' %}
+  <div class="banner"></div>
+
+  <div class="containerr">
+    <div class="container__inner">
+        <h1 class="titles" >- Карты</h1>
+        <div class="flexParent rukovod">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1554.0729488027964!2d72.80199555597427!3d40.517102400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdae9dff92c71b%3A0x27d637a30aaa2405!2z0JvQtdC90LjQvSDQn9GA0L7RgdC_0LXQutGCLCDQntGI!5e1!3m2!1sru!2skg!4v1690744695314!5m2!1sru!2skg" style="border:0;" allowfullscreen="true" loading="lazy" class="maps" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+           
+    </div>
+  </div>
+
+
+  {% include 'includes/footer.html' %}
+
+
+  {% endblock content %}

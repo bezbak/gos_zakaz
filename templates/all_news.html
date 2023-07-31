@@ -14,7 +14,7 @@
                         <p>{{news.created|date:"M"}}</p>
                         <p>{{news.created|date:"Y"}}</p>
                       </span>
-                      <a class="flexParent__items-bottom-desc">{{news.title}}</a>
+                      <a href="{% url 'news_detail' news.id %}" class="flexParent__items-bottom-desc">{{news.title}}</a>
                     </div>
                   </div>
                   {% endfor %}

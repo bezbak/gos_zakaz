@@ -20,11 +20,10 @@
     <div href="" class="header__menu-links adaps" id="app">Аппарат
       <img src="{% static 'allimages/Vector fff.png'%}" alt="">
       <div class="apparat">
-        <a href="#">Основная информация</a>
-        <a href="#">Руководство</a>
-        <a href="#">Структура</a>
-        <a target="_blank"
-          href="https://2gis.kg/osh/firm/70000001030889233/72.804408%2C40.517214?m=72.80609%2C40.515669%2F16.09">Карты</a>
+        <a href="{% url 'main_info' %}">Основная информация</a>
+        <a href="{% url 'managment' %}">Руководство</a>
+        <a href="{% url 'structs' %}">Структура</a>
+        <a href="{% url 'maps' %}">Карты</a>
       </div>
     </div>
 
@@ -60,15 +59,15 @@
 </button>
 </header>
 <div class="burgerMenu">
-  <a href="#" class="header__menu-links">Главная</a>
-  <a href="" class="header__menu-links">Новости</a>
+  <a href="{% url 'index' %}" class="header__menu-links">Главная</a>
+  <a href="{% url 'all_news' %}" class="header__menu-links">Новости</a>
   <div href="" class="accordionbek" id="app">
       <div class="accordion-itembek">
         <div class="accordion-headerbek">Аппарат <img src="{% static 'allimages/Vector fff.png'%}" alt=""></div>
         <div class="accordion-contentbek">
-            <a href="#">Руководство</a>
-            <a href="#">Структура</a>
-            <a target="_blank"href="https://2gis.kg/osh/firm/70000001030889233/72.804408%2C40.517214?m=72.80609%2C40.515669%2F16.09">Карты</a>
+            <a href="{% url 'managment' %}">Руководство</a>
+            <a href="{% url 'structs' %}">Структура</a>
+            <a href="{% url 'maps' %}">Карты</a>
        
         </div>
       </div>

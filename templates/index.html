@@ -58,9 +58,9 @@
                 </div>
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
-                <div class="contentSlider__items-bottom">
+                <a href="{% url 'news_detail' slider__item.id %}" class="contentSlider__items-bottom">
                   {{slider__item.title}}
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@
               <p>{{slider__item.created|date:"M"}}</p>
               <p>{{slider__item.created|date:"Y"}}</p>
             </span>
-            <a class="flexParent__items-bottom-desc">{{slider__item.title}}</a>
+            <a href="{% url 'news_detail' slider__item.id %}" class="flexParent__items-bottom-desc">{{slider__item.title}}</a>
           </div>
         </div>
         {% endfor %}
@@ -107,7 +107,7 @@
               <p>{{news_item.created|date:"M"}}</p>
               <p>{{news_item.created|date:"Y"}}</p>
             </span>
-            <a class="flexParent__items-bottom-desc">{{news_item.title}}</a>
+            <a href="{% url 'news_detail' news_item.id %}" class="flexParent__items-bottom-desc">{{news_item.title}}</a>
           </div>
         </div>
         {% endfor %}

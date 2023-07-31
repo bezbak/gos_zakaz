@@ -23,6 +23,13 @@ def all_news(request):
     }
     return render(request, 'all_news.html', context)
 
+def news_detail(request, id):
+    news = News.objects.get(id=id)
+    context = {
+        'news':news
+    }
+    return render(request, 'newsDetails.html', context)
+
 def search(request):
     news = News.objects.all()
     search_key = request.GET.get('search_key')
@@ -32,3 +39,4 @@ def search(request):
         'news':news
     }
     return render(request, 'search.html', context )
+

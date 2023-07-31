@@ -1,0 +1,26 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+  {% include 'includes/header.html' %}
+    <div class="containerr">
+        <div class="container__inner">
+
+            <div class="newsTitile">
+                <div class="newsTitile__date">
+                    <h2>{{news.created|date:"d"}}</h2>
+                    <h3>{{news.created|date:"M"}}</h3>
+                    <h3>{{news.created|date:"Y"}}</h3>
+                </div>
+                <span></span>
+                <h4>{{news.title}}</h4>
+            </div>
+            <img class="newsTitile-image" src="{{news.image.url}}" alt="">
+            <p class="newsDesc" >{{news.description}}</p>
+        </div>
+    </div>
+
+
+    {% include 'includes/footer.html' %}
+
+
+    {% endblock content %}
