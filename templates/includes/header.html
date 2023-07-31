@@ -27,15 +27,15 @@
       </div>
     </div>
 
-    <a href="https://portal.tunduk.kg/feedback/show" target="_blank" clss="header__menu-links adaps" id="oso" >
+    <div href="#" clss="header__menu-links adaps" id="oso" >
 
       Обращение граждан
-      <!--
-       <img src="{% static 'allimages/Vector fff.png'%}" alt="">
-       <div class="apparat2">
-        <a href="#"></a>
-      </div> -->
-    </a>
+      <img src="{% static 'allimages/Vector fff.png'%}" alt="">
+      <div class="apparat2">
+          <a href="https://portal.tunduk.kg/site/introd_page">Для авторизованных</a>
+          <a href="https://portal.tunduk.kg/public_services/new_message_sed">Для неавторизованных</a>
+      </div>
+    </div >
     <a href="" class="header__menu-links adaps">Для туристов</a>
     <a href="#contacts" class="header__menu-links adaps">Контакты</a>
     <form action="{% url 'search' %}">
@@ -65,6 +65,7 @@
       <div class="accordion-itembek">
         <div class="accordion-headerbek">Аппарат <img src="{% static 'allimages/Vector fff.png'%}" alt=""></div>
         <div class="accordion-contentbek">
+            <a href="{% url 'main_info' %}">Основная информация</a>
             <a href="{% url 'managment' %}">Руководство</a>
             <a href="{% url 'structs' %}">Структура</a>
             <a href="{% url 'maps' %}">Карты</a>
@@ -73,9 +74,16 @@
       </div>
     
   </div>
-
-    <a href="https://portal.tunduk.kg/feedback/show" target="_blank" clss="header__menu-links " id="oso_burger">Обращение граждан</a>
-  
+  <div href="" class="accordionbek" id="app">
+    <div class="accordion-itembek">
+      <div class="accordion-headerbek">Обращение граждан<img src="{% static 'allimages/Vector fff.png'%}" alt=""></div>
+      <div class="accordion-contentbek">
+          <a href="https://portal.tunduk.kg/site/introd_page">Для авторизованных</a>
+          <a href="https://portal.tunduk.kg/public_services/new_message_sed">Для неавторизованных</a>       
+      </div>
+    </div>
+</div>
+    
     <a href="" class="header__menu-links">Для туристов</a>
     <a href="#contacts" class="header__menu-links">Контакты</a>
     <nav class="header__menu socials socials_b">
