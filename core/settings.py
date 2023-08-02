@@ -36,6 +36,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -103,6 +104,16 @@ TIME_ZONE = 'Asia/Bishkek'
 USE_I18N = True
 
 USE_TZ = True
+
+# gettext = lambda s: s
+# LANGUAGES = (
+#     ('ru', gettext('Russia')),
+#     ('kg', gettext('Kyrgyz')),
+# )
+
+# LOCALE_PATHS = (
+#     os.path.join(BASE_DIR, 'locale'),
+# )
 
 
 # Static files (CSS, JavaScript, Images)
