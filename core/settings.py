@@ -97,7 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'ky'
 
 TIME_ZONE = 'Asia/Bishkek'
 
@@ -105,15 +105,15 @@ USE_I18N = True
 
 USE_TZ = True
 
-# gettext = lambda s: s
-# LANGUAGES = (
-#     ('ru', gettext('Russia')),
-#     ('kg', gettext('Kyrgyz')),
-# )
+gettext = lambda s: s
+LANGUAGES = (
+    ('ru', gettext('Russia')),
+    ('ky', gettext('Kyrgyz')),
+)
 
-# LOCALE_PATHS = (
-#     os.path.join(BASE_DIR, 'locale'),
-# )
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 
 # Static files (CSS, JavaScript, Images)

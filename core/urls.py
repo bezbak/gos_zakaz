@@ -14,4 +14,5 @@ urlpatterns += i18n_patterns(
     path('', include('apps.news.urls')),
     path('gallery/', include('apps.gallery.urls')),
     path('team/', include('apps.team.urls')),
+    prefix_default_language = 'kg'
 )
