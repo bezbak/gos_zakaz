@@ -35,7 +35,16 @@ a {
   color: inherit;
   text-decoration: none !important;
 }
-
+.lang_button img {
+    width: 100% !important;
+    height: 100% !important;
+}
+.lang_button {
+    width: calc((20vh + 15vw) * 0.08);
+    height: calc((15vh + 10vw) * 0.08);
+    border: none;
+    background-color: transparent;
+}
 .gl {
   width: 90% !important;
 }
