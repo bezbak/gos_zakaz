@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+ 
 <header class="header">
   <nav class="header__menu">
     <div id="pagelinkBtn">
@@ -50,6 +52,21 @@
     <img src="{% static 'allimages/faceBook.png'%}" alt="">
     <img src="{% static 'allimages/TikTok.png'%}" alt="">
     <span class="socials__span">
+
+    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}">
+        <select name="language">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Go">
+    </form>
       <img src="{% static 'allimages/RU - Russian Federation.png'%}" alt="">
       <img src="{% static 'allimages/Vector fff.png'%}" class="vector" alt="">
     </span>

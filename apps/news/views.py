@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from apps.news.models import News
 from apps.gallery.models import Image
 from django.db.models import Q
+
 # Create your views here.
 def index(request):
     slider_news = News.objects.all().order_by('-id')[:2]
@@ -39,4 +40,3 @@ def search(request):
         'news':news
     }
     return render(request, 'search.html', context )
-

@@ -1,18 +1,20 @@
 from django.db import models
+from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 
 class News(models.Model):
     image = models.ImageField(
-        'Фото новости',
+        _('Фото новости'),
         upload_to='news_images/'
     )
     title = models.CharField(
-        'Загаловок новости',
+        _('Загаловок новости'),
         max_length=55
     )
     description = models.TextField(
-        'Описание новости'
+        _('Описание новости')
     )
     created = models.DateField(
         auto_now_add=True
@@ -21,6 +23,9 @@ class News(models.Model):
     def __str__(self):
         return f'Новость: {self.title} || Дата {self.created}'
     
+    def get_absolute_url(self):
+        return reverse('news_detail', kwargs={'id':self.id})
+
     class Meta:
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
