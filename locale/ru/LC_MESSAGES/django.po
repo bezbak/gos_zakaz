@@ -26,11 +26,11 @@ msgstr ""
 
 #: .\apps\news\models.py:13
 msgid "Загаловок новости"
-msgstr ""
+msgstr "Жаңылыктын сүрөтү"
 
 #: .\apps\news\models.py:17
 msgid "Описание новости"
-msgstr ""
+msgstr "Жаңылыктын сүрөттөлүшү"
 
 #: .\core\settings.py:116
 msgid "Кыргызча"
@@ -48,15 +48,15 @@ msgstr "Главная"
 
 #: .\templates\includes\footer.html:8
 msgid "Вебсайтты иштеп чыккан"
-msgstr ""
+msgstr "Сайт разработан"
 
 #: .\templates\includes\footer.html:8
 msgid "Академия"
-msgstr ""
+msgstr "Академией"
 
 #: .\templates\includes\footer.html:15
 msgid "Навигация"
-msgstr ""
+msgstr "Навигация"
 
 #: .\templates\includes\footer.html:16 .\templates\includes\header.html:20
 #: .\templates\includes\header.html:75
@@ -70,25 +70,25 @@ msgstr "Новости"
 
 #: .\templates\includes\footer.html:21
 msgid "Мамлекет. сайттар"
-msgstr ""
+msgstr "Госю сайты"
 
 #: .\templates\includes\footer.html:27 .\templates\includes\header.html:42
 #: .\templates\includes\header.html:101
 msgid "Байланыштар"
-msgstr ""
+msgstr "Контакты"
 
 #: .\templates\includes\footer.html:43
 msgid "Бардык укуктар корголгон ©2023"
-msgstr ""
+msgstr "Все права защищены ©2023"
 
 #: .\templates\includes\header.html:22 .\templates\includes\header.html:79
 msgid "Аппарат"
-msgstr ""
+msgstr "Аппарат"
 
 #: .\templates\includes\header.html:25 .\templates\includes\header.html:81
 #: .\templates\mainInfo.html:9
 msgid "Негизги маалымат"
-msgstr ""
+msgstr "Основаная информация"
 
 #: .\templates\includes\header.html:26 .\templates\includes\header.html:82
 #, fuzzy
@@ -99,71 +99,71 @@ msgstr "Главная"
 #: .\templates\includes\header.html:27 .\templates\includes\header.html:83
 #: .\templates\struktura.html:10
 msgid "Структура"
-msgstr ""
+msgstr "Структура"
 
 #: .\templates\includes\header.html:28 .\templates\includes\header.html:84
 #: .\templates\maps.html:9
 msgid "Карталар"
-msgstr ""
+msgstr "Карты"
 
 #: .\templates\includes\header.html:34 .\templates\includes\header.html:92
 msgid "Жарандардын кайрылуусу"
-msgstr ""
+msgstr "Обращение граждан"
 
 #: .\templates\includes\header.html:37 .\templates\includes\header.html:94
 msgid "Уруксаты барлар үчүн"
-msgstr ""
+msgstr "Для авторизованных"
 
 #: .\templates\includes\header.html:38 .\templates\includes\header.html:95
 msgid "Уруксатсыздар үчүн"
-msgstr ""
+msgstr "Для неавторизованных"
 
 #: .\templates\includes\header.html:41 .\templates\includes\header.html:100
 #: .\templates\tourism.html:10
 msgid "Туристтер үчүн"
-msgstr ""
+msgstr "Для туристов"
 
 #: .\templates\index.html:11
 msgid "Негизги окуялар"
-msgstr ""
+msgstr "Главные события"
 
 #: .\templates\index.html:101
 #, fuzzy
 #| msgid "Жаңылыктар"
 msgid "Айдын жаңылыктары"
-msgstr "Новости"
+msgstr "Новости месяца"
 
 #: .\templates\index.html:118
 msgid "Сүрөт галерея"
-msgstr ""
+msgstr "Фотогалерея"
 
 #: .\templates\index.html:128
 msgid "Ыкчам шилтемелер"
-msgstr ""
+msgstr "Быстрые ссылки"
 
 #: .\templates\index.html:131
 msgid "Суроо берүү"
-msgstr ""
+msgstr "Задайте вопрос"
 
 #: .\templates\index.html:136
 msgid "Билим берүү"
-msgstr ""
+msgstr "Образование"
 
 #: .\templates\index.html:141
 msgid "Мамлекеттик органдар"
-msgstr ""
+msgstr "Государственные органы"
 
 #: .\templates\index.html:143
 msgid "Жогорку Кенеш "
-msgstr ""
+msgstr "Верховный Совет"
 
 #: .\templates\index.html:145
 msgid "Юридикалык маалыматтын борборлоштурулган банкы"
-msgstr ""
+msgstr "Централизованный банк правовой информации"
 
 #: .\templates\index.html:149
 msgid "Кыргызстандагы туризм"
-msgstr ""
+msgstr "Туризм в Кыргызстане"
 
 #~ msgid "Жарнаманын суроту"
 #~ msgstr "Фото новости"
