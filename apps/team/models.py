@@ -46,3 +46,18 @@ class Struct(models.Model):
         verbose_name = 'Структура'
         verbose_name_plural = 'Структуры'
         
+class MainInfo(models.Model):
+    text = models.TextField()
+    def __str__(self):
+        return f"Инфо: {self.id}"
+    class Meta:
+        verbose_name = 'Главная информация'
+        verbose_name_plural = 'Главная информация'
+
+class Tourism(models.Model):
+    text = models.TextField()
+    def __str__(self):
+        return f"Туризм: {self.id}"
+    class Meta:
+        verbose_name = 'Для Туристов'
+        verbose_name_plural = 'Для Туристов'

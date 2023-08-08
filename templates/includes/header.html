@@ -17,29 +17,29 @@
         <a href="#">Чон-Алай<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
       </div>
     </div>
-    <a href="{% url 'index' %}" class="header__menu-links adaps">Главная</a>
-    <a href="{% url 'all_news' %}" class="header__menu-links adaps">Новости</a>
-    <div href="" class="header__menu-links adaps" id="app">Аппарат
+    <a href="{% url 'index' %}" class="header__menu-links adaps">{% trans "Башкы" %}</a>
+    <a href="{% url 'all_news' %}" class="header__menu-links adaps">{% trans "Жаңылыктар" %}</a>
+    <div href="" class="header__menu-links adaps" id="app">{% trans "Аппарат" %}
       <img src="{% static 'allimages/Vector fff.png'%}" alt="">
       <div class="apparat">
-        <a href="{% url 'main_info' %}">Основная информация</a>
-        <a href="{% url 'managment' %}">Руководство</a>
-        <a href="{% url 'structs' %}">Структура</a>
-        <a href="{% url 'maps' %}">Карты</a>
+        <a href="{% url 'main_info' %}">{% trans "Негизги маалымат" %}</a>
+        <a href="{% url 'managment' %}">{% trans "Башкаруу" %}</a>
+        <a href="{% url 'structs' %}">{% trans "Структура" %}</a>
+        <a href="{% url 'maps' %}">{% trans "Карталар" %}</a>
       </div>
     </div>
 
     <div href="#" clss="header__menu-links adaps" id="oso" >
 
-      Обращение граждан
+      {% trans "Жарандардын кайрылуусу" %}
       <img src="{% static 'allimages/Vector fff.png'%}" alt="">
       <div class="apparat2">
-          <a href="https://portal.tunduk.kg/site/introd_page">Для авторизованных</a>
-          <a href="https://portal.tunduk.kg/public_services/new_message_sed">Для неавторизованных</a>
+          <a href="https://portal.tunduk.kg/site/introd_page">{% trans "Уруксаты барлар үчүн" %}</a>
+          <a href="https://portal.tunduk.kg/public_services/new_message_sed">{% trans "Уруксатсыздар үчүн" %}</a>
       </div>
     </div >
-    <a href="" class="header__menu-links adaps">Для туристов</a>
-    <a href="#contacts" class="header__menu-links adaps">Контакты</a>
+    <a href="{% url 'tourism' %}" class="header__menu-links adaps">{% trans "Туристтер үчүн" %}</a>
+    <a href="#contacts" class="header__menu-links adaps">{% trans "Байланыштар" %}</a>
     <form action="{% url 'search' %}">
       <div class="header__menu-search gl">
         <img src="{% static 'allimages/liupa.png'%}" alt="">
@@ -55,20 +55,16 @@
 
     <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
         <input name="next" type="hidden" value="{{ redirect_to }}">
-        <select name="language">
             {% get_current_language as LANGUAGE_CODE %}
             {% get_available_languages as LANGUAGES %}
             {% get_language_info_list for LANGUAGES as languages %}
             {% for language in languages %}
-                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                    {{ language.name_local }} ({{ language.code }})
-                </option>
-            {% endfor %}
-        </select>
-        <input type="submit" value="Go">
-    </form>
-      <img src="{% static 'allimages/RU - Russian Federation.png'%}" alt="">
-      <img src="{% static 'allimages/Vector fff.png'%}" class="vector" alt="">
+                  {% if language.code == LANGUAGE_CODE %} 
+                  {% else %}
+                  <button class='lang_button' value="{{ language.code }}" name="language" type="submit"><img src="/static/allimages/{{language.code}}.png" /></button>
+                  {% endif %}
+              {% endfor %}
+      </form>
     </span>
   </nav>
   <button class="burger__btn" id="burger">
@@ -76,16 +72,16 @@
 </button>
 </header>
 <div class="burgerMenu">
-  <a href="{% url 'index' %}" class="header__menu-links">Главная</a>
-  <a href="{% url 'all_news' %}" class="header__menu-links">Новости</a>
+  <a href="{% url 'index' %}" class="header__menu-links">{% trans "Башкы" %}</a>
+  <a href="{% url 'all_news' %}" class="header__menu-links">{% trans "Жаңылыктар" %}</a>
   <div href="" class="accordionbek" id="app">
       <div class="accordion-itembek">
-        <div class="accordion-headerbek">Аппарат <img src="{% static 'allimages/Vector fff.png'%}" alt=""></div>
+        <div class="accordion-headerbek">{% trans "Аппарат" %} <img src="{% static 'allimages/Vector fff.png'%}" alt=""></div>
         <div class="accordion-contentbek">
-            <a href="{% url 'main_info' %}">Основная информация</a>
-            <a href="{% url 'managment' %}">Руководство</a>
-            <a href="{% url 'structs' %}">Структура</a>
-            <a href="{% url 'maps' %}">Карты</a>
+            <a href="{% url 'main_info' %}">{% trans "Негизги маалымат" %}</a>
+            <a href="{% url 'managment' %}">{% trans "Башкаруу" %}</a>
+            <a href="{% url 'structs' %}">{% trans "Структура" %}</a>
+            <a href="{% url 'maps' %}">{% trans "Карталар" %}</a>
        
         </div>
       </div>
@@ -93,23 +89,33 @@
   </div>
   <div href="" class="accordionbek" id="app">
     <div class="accordion-itembek">
-      <div class="accordion-headerbek">Обращение граждан<img src="{% static 'allimages/Vector fff.png'%}" alt=""></div>
+      <div class="accordion-headerbek">{% trans "Жарандардын кайрылуусу" %}<img src="{% static 'allimages/Vector fff.png'%}" alt=""></div>
       <div class="accordion-contentbek">
-          <a href="https://portal.tunduk.kg/site/introd_page">Для авторизованных</a>
-          <a href="https://portal.tunduk.kg/public_services/new_message_sed">Для неавторизованных</a>       
+          <a href="https://portal.tunduk.kg/site/introd_page">{% trans "Уруксаты барлар үчүн" %}</a>
+          <a href="https://portal.tunduk.kg/public_services/new_message_sed">{% trans "Уруксатсыздар үчүн" %}</a>       
       </div>
     </div>
 </div>
     
-    <a href="" class="header__menu-links">Для туристов</a>
-    <a href="#contacts" class="header__menu-links">Контакты</a>
+    <a href="" class="header__menu-links">{% trans "Туристтер үчүн" %}</a>
+    <a href="#contacts" class="header__menu-links">{% trans "Байланыштар" %}</a>
     <nav class="header__menu socials socials_b">
       <img src="{% static 'allimages/instagtam.png'%}" alt="">
       <img src="{% static 'allimages/faceBook.png'%}" alt="">
       <img src="{% static 'allimages/TikTok.png'%}" alt="">
       <span class="socials__span">
-        <img src="{% static 'allimages/RU - Russian Federation.png'%}" alt="">
-        <img src="{% static 'allimages/Vector fff.png'%}" class="vector" alt="">
+        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+          <input name="next" type="hidden" value="{{ redirect_to }}">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% get_available_languages as LANGUAGES %}
+              {% get_language_info_list for LANGUAGES as languages %}
+              {% for language in languages %}
+                    {% if language.code == LANGUAGE_CODE %} 
+                    {% else %}
+                    <button class='lang_button' value="{{ language.code }}" name="language" type="submit"><img src="/static/allimages/{{language.code}}.png" /></button>
+                    {% endif %}
+                {% endfor %}
+        </form>
       </span>
     </nav>
 

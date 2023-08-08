@@ -8,7 +8,16 @@
 body {
   background-color: #fdfeff !important;
 }
-
+.lang_button{
+  width: calc((20vh + 15vw) * 0.08);
+  height: calc((15vh + 10vw) * 0.08);
+  border: none;
+  background-color: transparent;
+}
+.lang_button img{
+  width: 100% !important;
+  height: 100% !important;
+}
 .slider__item {
   width: 200px;
   height: 200px;

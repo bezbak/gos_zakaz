@@ -1,29 +1,30 @@
 {% load static %}
+{% load i18n %}
 <footer class="footer">
   <img src="{% static 'allimages/Fot.png'%}" class="fot" alt="">
   <div class="flexParent gap">
     <div class="flexParent__items itemsLinks footerItems ">
 
-      <h5>Сайт разработан: <br> Академией <span class="it"><a class="it"
+      <h5>{% trans "Вебсайтты иштеп чыккан" %}: <br> {% trans "Академия" %} <span class="it"><a class="it"
             href="https://www.instagram.com/itpark_osh/">It</span><b class="park">Park</b>
         </a>
       </h5>
 
     </div>
     <div class="flexParent__items itemsLinks footerItems">
-      <h2>Навигация</h2>
-      <a class="footerItems__links" href="#">Главная</a>
-      <a class="footerItems__links" href="#">Новости</a>
+      <h2>{% trans "Навигация" %}</h2>
+      <a class="footerItems__links" href="#">{% trans "Башкы" %}</a>
+      <a class="footerItems__links" href="#">{% trans "Жаңылыктар" %}</a>
       <a class="footerItems__links" href="#">ПП Ошской области</a>
     </div>
     <div class="flexParent__items itemsLinks footerItems">
-      <h2>Гос. сайты</h2>
+      <h2>{% trans "Мамлекет. сайттар" %}</h2>
       <a class="footerItems__links" target="_blank"  href="https://www.gov.kg/ky">gov.kg</a>
       <a class="footerItems__links"  target="_blank" href="https://portal.tunduk.kg/">portal.tunduk.kg</a>
       <a class="footerItems__links" target="_blank"  href="http://www.kattar.kg/kg/">kattar.kg</a>
     </div>
     <div class="flexParent__items itemsLinks footerItems">
-      <h2 id="contacts" >Контакты</h2>
+      <h2 id="contacts" >{% trans "Байланыштар" %}</h2>
         <p>
           <img src="{% static 'allimages/bildirme.png'%}" alt=""> 
           <a class="footerItems__links" href="mailto:info@kpc.kg">Email адрес: <br> info@kpc.kg</a>
@@ -39,5 +40,5 @@
     </div>
    
   </div>
-  <div class="copyright">Все права защищены ©2023</div>
+  <div class="copyright">{% trans "Бардык укуктар корголгон ©2023" %}</div>
 </footer>

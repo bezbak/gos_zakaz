@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Team, Struct
+from .models import Team, Struct, MainInfo, Tourism
 # Create your views here.
 
 def managment(request):
@@ -17,7 +17,18 @@ def structs(request):
     return render(request, 'struktura.html', context)
 
 def main_info(request):
-    return render(request, 'mainInfo.html')
+    main_info = MainInfo.objects.latest('id')
+    context = {
+        'main_info':main_info
+    }
+    return render(request, 'mainInfo.html',context)
+
+def tourism(request):
+    tourism = Tourism.objects.latest('id')
+    context = {
+        'tourism':tourism
+    }
+    return render(request, 'tourism.html',context)
 
 def maps(request):
     return render(request, 'maps.html')

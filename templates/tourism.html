@@ -1,0 +1,20 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+  {% include 'includes/header.html' %}
+  <div class="banner"></div>
+
+  <div class="containerr">
+    <div class="container__inner">
+        <h1 class="titles" >- {% trans "Туристтер үчүн" %}</h1>
+          <div>
+            {{tourism.text|safe}}
+          </div>
+    </div>
+  </div>
+
+  {% include 'includes/footer.html' %}
+
+
+  {% endblock content %}

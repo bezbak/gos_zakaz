@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django import forms
+from modeltranslation.admin import TranslationAdmin
 from apps.news.models import News, Media
 from django.utils.translation import gettext_lazy as _
 # Register your models here.
@@ -15,7 +16,7 @@ class MediaInline(admin.TabularInline):
     model = Media
     extra = 2
 
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(TranslationAdmin):
     inlines = [
         MediaInline,
     ]
