@@ -111,11 +111,11 @@ msgid "Жарандардын кайрылуусу"
 msgstr "Обращение граждан"
 
 #: .\templates\includes\header.html:36 .\templates\includes\header.html:93
-msgid "Уруксаты барлар үчүн"
+msgid "Катталган жарандар үчүн"
 msgstr "Для авторизованных"
 
 #: .\templates\includes\header.html:37 .\templates\includes\header.html:94
-msgid "Уруксатсыздар үчүн"
+msgid "Катталбаган жарандар үчүн"
 msgstr "Для неавторизованных"
 
 #: .\templates\includes\header.html:40 .\templates\includes\header.html:99
