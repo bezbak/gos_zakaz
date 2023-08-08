@@ -8,7 +8,6 @@
 body {
   background-color: #fdfeff !important;
 }
-
 .slider__item {
   width: 200px;
   height: 200px;
@@ -165,6 +164,7 @@ a {
   background-color: transparent;
   color: #fff;
 }
+
 .header .socials {
   gap: calc((10vh + 10vw) / 12);
   width: max-content;
