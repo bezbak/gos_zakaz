@@ -70,7 +70,7 @@ msgstr "Новости"
 
 #: .\templates\includes\footer.html:21
 msgid "Мамлекет. сайттар"
-msgstr "Госю сайты"
+msgstr "Гос. сайты"
 
 #: .\templates\includes\footer.html:27 .\templates\includes\header.html:42
 #: .\templates\includes\header.html:101
