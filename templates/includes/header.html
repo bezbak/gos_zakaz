@@ -48,9 +48,9 @@
     </form>
   </nav>
   <nav class="header__menu socials">
-    <img src="{% static 'allimages/instagtam.png'%}" alt="">
-    <img src="{% static 'allimages/faceBook.png'%}" alt="">
-    <img src="{% static 'allimages/TikTok.png'%}" alt="">
+    <a href='https://instagram.com/osh_oblusu?igshid=MzRlODBiNWFlZA=='><img src="{% static 'allimages/instagtam.png'%}" alt=""></a>
+    <a href='https://www.facebook.com/Oshoblasty?mibextid=ZbWKwL'><img src="{% static 'allimages/faceBook.png'%}" alt=""></a>
+    <a href="https://vt.tiktok.com/ZSLXSdK8t/"><img src="{% static 'allimages/TikTok.png'%}" alt=""></a>
     <span class="socials__span">
 
     <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -97,12 +97,12 @@
     </div>
 </div>
     
-    <a href="" class="header__menu-links">{% trans "Туристтер үчүн" %}</a>
+    <a href="{% url 'tourism' %}" class="header__menu-links">{% trans "Туристтер үчүн" %}</a>
     <a href="#contacts" class="header__menu-links">{% trans "Байланыштар" %}</a>
     <nav class="header__menu socials socials_b">
-      <img src="{% static 'allimages/instagtam.png'%}" alt="">
-      <img src="{% static 'allimages/faceBook.png'%}" alt="">
-      <img src="{% static 'allimages/TikTok.png'%}" alt="">
+      <a href='https://instagram.com/osh_oblusu?igshid=MzRlODBiNWFlZA=='><img src="{% static 'allimages/instagtam.png'%}" alt=""></a>
+      <a href='https://www.facebook.com/Oshoblasty?mibextid=ZbWKwL'><img src="{% static 'allimages/faceBook.png'%}" alt=""></a>
+      <a href="https://vt.tiktok.com/ZSLXSdK8t/"><img src="{% static 'allimages/TikTok.png'%}" alt=""></a>
       <span class="socials__span">
         <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
           <input name="next" type="hidden" value="{{ redirect_to }}">

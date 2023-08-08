@@ -61,3 +61,13 @@ class Tourism(models.Model):
     class Meta:
         verbose_name = 'Для Туристов'
         verbose_name_plural = 'Для Туристов'
+
+class Links(models.Model):
+    email = models.EmailField()
+    phone1 = models.CharField(max_length=25)
+    phone2 = models.CharField(max_length=25)
+    fax = models.CharField(max_length=25)
+
+    class Meta:
+        verbose_name = 'Контакт'
+        verbose_name_plural = 'Контакты'
