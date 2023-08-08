@@ -2,7 +2,7 @@ from django import forms
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
-from .models import Team, Struct, MainInfo,Tourism,Links
+from .models import Team, Struct, MainInfo,Tourism,Links, Images
 
 class MainInfoAdminForm(forms.ModelForm):
     text = forms.CharField(widget=CKEditorUploadingWidget())
@@ -26,4 +26,5 @@ admin.site.register(Tourism, TourismAdmin)
 admin.site.register(MainInfo, MainInfoAdmin)    
 admin.site.register(Team,TranslationAdmin)
 admin.site.register(Links)
+admin.site.register(Images)
 admin.site.register(Struct,TranslationAdmin)

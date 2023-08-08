@@ -71,3 +71,9 @@ class Links(models.Model):
     class Meta:
         verbose_name = 'Контакт'
         verbose_name_plural = 'Контакты'
+
+class Images(models.Model):
+    main_image = models.ImageField(
+        upload_to='images/'
+    )
+
