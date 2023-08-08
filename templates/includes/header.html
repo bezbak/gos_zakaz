@@ -99,9 +99,9 @@
     <a href="{% url 'tourism' %}" class="header__menu-links">{% trans "Туристтер үчүн" %}</a>
     <a href="#contacts" class="header__menu-links">{% trans "Байланыштар" %}</a>
     <nav class="header__menu socials socials_b">
-      <a href='https://instagram.com/osh_oblusu?igshid=MzRlODBiNWFlZA=='><img src="{% static 'allimages/instagtam.png'%}" alt=""></a>
-      <a href='https://www.facebook.com/Oshoblasty?mibextid=ZbWKwL'><img src="{% static 'allimages/faceBook.png'%}" alt=""></a>
-      <a href="https://vt.tiktok.com/ZSLXSdK8t/"><img src="{% static 'allimages/TikTok.png'%}" alt=""></a>
+      <a style='max-width: 25px !important;' href='https://instagram.com/osh_oblusu?igshid=MzRlODBiNWFlZA=='><img style='max-width: 25px !important;'  src="{% static 'allimages/instagtam.png'%}" alt=""></a>
+      <a style='max-width: 25px !important;' href='https://www.facebook.com/Oshoblasty?mibextid=ZbWKwL'><img style='max-width: 25px !important;'  src="{% static 'allimages/faceBook.png'%}" alt=""></a>
+      <a style='max-width: 25px !important;' href="https://vt.tiktok.com/ZSLXSdK8t/"><img style='max-width: 25px !important;'  src="{% static 'allimages/TikTok.png'%}" alt=""></a>
       <span class="socials__span">
         <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
           <input name="next" type="hidden" value="{{ redirect_to }}">
