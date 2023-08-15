@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-08 18:01+0600\n"
+"POT-Creation-Date: 2023-08-15 15:04+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,16 +21,16 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: .\apps\news\models.py:9
-msgid "Фото новости"
-msgstr ""
+msgid "Жаңылыктын сүрөтү"
+msgstr "Фото новости"
 
 #: .\apps\news\models.py:13
-msgid "Загаловок новости"
-msgstr "Жаңылыктын сүрөтү"
+msgid "Жаңылыктын башы"
+msgstr "Загаловок новости"
 
-#: .\apps\news\models.py:17
-msgid "Описание новости"
-msgstr "Жаңылыктын сүрөттөлүшү"
+#: .\apps\news\models.py:17 .\apps\news\models.py:20
+msgid "Жаңылыктын сүрөттөлүшү"
+msgstr "Описание новости"
 
 #: .\core\settings.py:116
 msgid "Кыргызча"
@@ -39,6 +39,10 @@ msgstr "Киргизский"
 #: .\core\settings.py:117
 msgid "Орусча"
 msgstr "Русский"
+
+#: .\templates\corruption.html:10
+msgid "Коррупцияга каршы маалымат"
+msgstr "Информация о противодействии коррупции"
 
 #: .\templates\homepage.html:9
 #, fuzzy
@@ -86,23 +90,23 @@ msgid "Аппарат"
 msgstr "Аппарат"
 
 #: .\templates\includes\header.html:24 .\templates\includes\header.html:80
-#: .\templates\mainInfo.html:9
+#: .\templates\mainInfo.html:10
 msgid "Негизги маалымат"
 msgstr "Основаная информация"
 
 #: .\templates\includes\header.html:25 .\templates\includes\header.html:81
-#, fuzzy
-#| msgid "Башкы"
 msgid "Башкаруу"
-msgstr "Главная"
+msgstr "Руководство"
 
 #: .\templates\includes\header.html:26 .\templates\includes\header.html:82
-#: .\templates\struktura.html:10
+#: .\templates\struktura.html:11
 msgid "Структура"
 msgstr "Структура"
 
 #: .\templates\includes\header.html:27 .\templates\includes\header.html:83
-#: .\templates\maps.html:9
+#: .\templates\maps.html:10
+#, fuzzy
+#| msgid "Карта"
 msgid "Карталар"
 msgstr "Карты"
 
@@ -111,12 +115,16 @@ msgid "Жарандардын кайрылуусу"
 msgstr "Обращение граждан"
 
 #: .\templates\includes\header.html:36 .\templates\includes\header.html:93
-msgid "Катталган жарандар үчүн"
-msgstr "Для авторизованных"
+#, fuzzy
+#| msgid "Туристтер үчүн"
+msgid "Уруксаты барлар үчүн"
+msgstr "Для туристов"
 
 #: .\templates\includes\header.html:37 .\templates\includes\header.html:94
-msgid "Катталбаган жарандар үчүн"
-msgstr "Для неавторизованных"
+#, fuzzy
+#| msgid "Туристтер үчүн"
+msgid "Уруксатсыздар үчүн"
+msgstr "Для туристов"
 
 #: .\templates\includes\header.html:40 .\templates\includes\header.html:99
 #: .\templates\tourism.html:10
@@ -127,50 +135,59 @@ msgstr "Для туристов"
 msgid "Негизги окуялар"
 msgstr "Главные события"
 
-#: .\templates\index.html:40
+#: .\templates\index.html:36
 msgid ""
 "Министрлер кабинетинин башчысы Акылбек Жапаров жана Либерал-демократиялык "
 "партиянын Башкы кеңешинин төрагасы Тошиаки Эндо эки тараптуу кызматташуу "
 "маселелерин талкуулады"
-msgstr "Глава Кабмина Акылбек Жапаров и Председатель Генерального совета Либерально-демократической партии Тосиаки Эндо обсудили вопросы двустороннего сотрудничества"
+msgstr ""
+"Глава Кабмина Акылбек Жапаров и Председатель Генерального совета Либерально-"
+"демократической партии Тосиаки Эндо обсудили вопросы двустороннего "
+"сотрудничества"
 
-#: .\templates\index.html:100
+#: .\templates\index.html:91
 #, fuzzy
 #| msgid "Жаңылыктар"
 msgid "Айдын жаңылыктары"
 msgstr "Новости месяца"
 
-#: .\templates\index.html:117
+#: .\templates\index.html:108
 msgid "Сүрөт галерея"
 msgstr "Фотогалерея"
 
-#: .\templates\index.html:127
+#: .\templates\index.html:118
 msgid "Ыкчам шилтемелер"
 msgstr "Быстрые ссылки"
 
-#: .\templates\index.html:130
+#: .\templates\index.html:121
 msgid "Суроо берүү"
 msgstr "Задайте вопрос"
 
-#: .\templates\index.html:135
+#: .\templates\index.html:126
 msgid "Билим берүү"
 msgstr "Образование"
 
-#: .\templates\index.html:140
+#: .\templates\index.html:131
 msgid "Мамлекеттик органдар"
 msgstr "Государственные органы"
 
-#: .\templates\index.html:142
+#: .\templates\index.html:133
 msgid "Жогорку Кенеш "
 msgstr "Верховный Совет"
 
-#: .\templates\index.html:144
+#: .\templates\index.html:135
 msgid "Юридикалык маалыматтын борборлоштурулган банкы"
 msgstr "Централизованный банк правовой информации"
 
-#: .\templates\index.html:148
+#: .\templates\index.html:139
 msgid "Кыргызстандагы туризм"
 msgstr "Туризм в Кыргызстане"
+
+#~ msgid "Катталган жарандар үчүн"
+#~ msgstr "Для авторизованных"
+
+#~ msgid "Катталбаган жарандар үчүн"
+#~ msgstr "Для неавторизованных"
 
 #~ msgid "Жанылыктын суроту"
 #~ msgstr "Фото новости"

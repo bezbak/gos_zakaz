@@ -3,13 +3,18 @@
 {% load i18n %}
 {% block content %}
   {% include 'includes/header.html' %}
-  <div class="banner"></div>
+  <div class="banner" style="background-image:url('{{images.main_image.url}}')!important;"></div>
 
   <div class="containerr">
     <div class="container__inner">
         <h1 class="titles" >- {% trans "Негизги маалымат" %}</h1>
           <div>
+            {% get_current_language as LANGUAGE_CODE %}
+            {% if LANGUAGE_CODE == 'ru' %}
+            {{main_info.text_ru|safe}}
+            {% else %}
             {{main_info.text|safe}}
+            {% endif %}
           </div>
     </div>
   </div>

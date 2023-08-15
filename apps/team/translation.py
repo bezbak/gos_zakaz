@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Team, Struct, MainInfo, Tourism
+from .models import Team, Struct,GosLinks
 
 @register(Team)
 class TeamTranslationsOptions(TranslationOptions):
@@ -7,12 +7,7 @@ class TeamTranslationsOptions(TranslationOptions):
     
 @register(Struct)
 class StructTranslationsOptions(TranslationOptions):
+    fields = ('name','description',)
+@register(GosLinks)
+class GosLinksTranslationsOptions(TranslationOptions):
     fields = ('name',)
-
-@register(MainInfo)
-class MainInfoTranslationsOptions(TranslationOptions):
-    fields = ('text',)
-
-@register(Tourism)
-class TourismTranslationsOptions(TranslationOptions):
-    fields = ('text',)

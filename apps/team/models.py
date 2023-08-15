@@ -18,10 +18,6 @@ class Team(models.Model):
         'Номер телефона',
         max_length=20
     )
-    email = models.CharField(
-        'Почта',
-        max_length=50
-    )
     
     def __str__(self):
         return f"{self.full_name} : {self.job_title}"
@@ -35,6 +31,7 @@ class Struct(models.Model):
         'Название структуры',
         max_length=50
     )
+    description = models.TextField()
     phone = models.CharField(
         'Номер телефона',
         max_length=20
@@ -48,6 +45,7 @@ class Struct(models.Model):
         
 class MainInfo(models.Model):
     text = models.TextField()
+    text_ru = models.TextField()
     def __str__(self):
         return f"Инфо: {self.id}"
     class Meta:
@@ -56,11 +54,21 @@ class MainInfo(models.Model):
 
 class Tourism(models.Model):
     text = models.TextField()
+    text_ru = models.TextField()
     def __str__(self):
         return f"Туризм: {self.id}"
     class Meta:
         verbose_name = 'Для Туристов'
         verbose_name_plural = 'Для Туристов'
+
+class Corruption(models.Model):
+    text = models.TextField()
+    text_ru = models.TextField()
+    def __str__(self):
+        return f"Коррупция: {self.id}"
+    class Meta:
+        verbose_name = 'Информациия о противодействии коррупции'
+        verbose_name_plural = 'Информациия о противодействии коррупции'
 
 class Links(models.Model):
     email = models.EmailField()
@@ -71,6 +79,20 @@ class Links(models.Model):
     class Meta:
         verbose_name = 'Контакт'
         verbose_name_plural = 'Контакты'
+class GosLinks(models.Model):
+    name = models.CharField(
+        max_length=50
+    )
+    url = models.URLField(
+        max_length=200
+    )
+
+    def __str__(self):
+        return f"{self.name}"
+
+    class Meta:
+        verbose_name = 'Ссылка на гос сайт'
+        verbose_name_plural = 'Ссылки на гос сайты'
 
 class Images(models.Model):
     main_image = models.ImageField(
