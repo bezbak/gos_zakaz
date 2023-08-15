@@ -21,29 +21,9 @@
             aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="d-block w-100 contentSlider">
-              <div class="contentSlider__items">
-                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
-                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬇️⬇️⬇️ -->
-                <h3 class="contentSlider__items-date"><b class="datesBlue">07</b> ИЮЛЯ</h3>
-                <div class="contentSlider__items-top">
-                  <img src="{% static 'allimages/carousel big.png'%}" class="items-big" alt="">
-                  <div class="items-small">
-                    <img src="{% static 'allimages/carousel small 1.png'%}" alt="">
-                    <img src="{% static 'allimages/carouselsmall1.png'%}" alt="">
-                  </div>
-                </div>
-                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
-                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
-                <div class="contentSlider__items-bottom">
-                  {% trans "Министрлер кабинетинин башчысы Акылбек Жапаров жана Либерал-демократиялык партиянын Башкы кеңешинин төрагасы Тошиаки Эндо эки тараптуу кызматташуу маселелерин талкуулады" %}
-                </div>
-              </div>
-            </div>
-          </div>
           {% for slider__item in slider_news %}
-          <div class="carousel-item ">
+          {%if forloop.counter == 1%}
+          <div class="carousel-item active">
             <div class="d-block w-100 contentSlider">
               <div class="contentSlider__items">
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
@@ -51,11 +31,6 @@
                 <h3 class="contentSlider__items-date"><b class="datesBlue">{{slider__item.created|date:"d"}}</b> {{slider__item.created|date:"M"}}</h3>
                 <div class="contentSlider__items-top">
                   <img src="{{slider__item.image.url}}" class="items-big" alt="">
-                  <div class="items-small">
-                    {% for image in slider__item.media.all %}
-                    <img src="{{image.image.url}}" alt="">
-                    {% endfor %}
-                  </div>
                 </div>
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
@@ -65,6 +40,25 @@
               </div>
             </div>
           </div>
+          {%else%}
+          <div class="carousel-item ">
+            <div class="d-block w-100 contentSlider">
+              <div class="contentSlider__items">
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬇️⬇️⬇️ -->
+                <h3 class="contentSlider__items-date"><b class="datesBlue">{{slider__item.created|date:"d"}}</b> {{slider__item.created|date:"M"}}</h3>
+                <div class="contentSlider__items-top">
+                  <img src="{{slider__item.image.url}}" class="items-big" alt="">
+                </div>
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
+                <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
+                <a href="{% url 'news_detail' slider__item.id %}" class="contentSlider__items-bottom">
+                  {{slider__item.title}}
+                </a>
+              </div>
+            </div>
+          </div>
+          {%endif%}
           {% endfor %}
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

@@ -70,3 +70,4 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 2; // adjust scrolling speed here 
   slider.scrollLeft = scrollLeft - walk; 
 }); 
+

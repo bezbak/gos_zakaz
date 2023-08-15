@@ -1,5 +1,7 @@
 {% extends 'homepage.html' %}
 {% load static %}
+{% load i18n %}
+ 
 {% block content %}
   {% include 'includes/header.html' %}
     <div class="containerr">
@@ -14,8 +16,18 @@
                 <span></span>
                 <h4>{{news.title}}</h4>
             </div>
-            <img class="newsTitile-image" src="{{news.image.url}}" alt="">
-            <p class="newsDesc" >{{news.description}}</p>
+            <div class="news_slider">
+                <img class="newsTitile-image" src="{{news.image.url}}" alt="">
+                {% for media in news.media.all %}
+                    <img class="newsTitile-image" src="{{media.image.url}}" alt="">
+                {% endfor %}
+            </div>
+            {% get_current_language as LANGUAGE_CODE %}
+            {% if LANGUAGE_CODE == 'ru' %}
+            <p class="newsDesc" >{{news.description_ru|safe}}</p>
+            {% else %}
+            <p class="newsDesc" >{{news.description|safe}}</p>
+            {% endif %}
         </div>
     </div>
 

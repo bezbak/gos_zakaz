@@ -16,6 +16,10 @@ body {
   scroll-snap-align: center;
   cursor: grab;
 }
+.slick-slider{
+  display: flex !important;
+  align-items: center !important;
+}
 
 .slider::-webkit-scrollbar {
   display: none;

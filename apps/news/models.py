@@ -6,15 +6,18 @@ from django.utils.translation import gettext_lazy as _
 
 class News(models.Model):
     image = models.ImageField(
-        _('Фото новости'),
+        _('Жаңылыктын сүрөтү'),
         upload_to='news_images/'
     )
     title = models.CharField(
-        _('Загаловок новости'),
+        _('Жаңылыктын башы'),
         max_length=55
     )
     description = models.TextField(
-        _('Описание новости')
+        _('Жаңылыктын сүрөттөлүшү')
+    )
+    description_ru = models.TextField(
+        _('Жаңылыктын сүрөттөлүшү')
     )
     created = models.DateField(
         auto_now_add=True
@@ -45,5 +48,5 @@ class Media(models.Model):
         return f"Фото:{self.news.title} номер {self.id}"
    
     class Meta:
-        verbose_name = 'Доп фото новости'
-        verbose_name_plural = 'Доп фото новости'
+        verbose_name = 'Доп Жаңылыктын сүрөтү'
+        verbose_name_plural = 'Доп Жаңылыктын сүрөтү'
