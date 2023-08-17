@@ -9,10 +9,10 @@
           {% for team in team %}
             <div class="flexParent__items footerItems rukovod__items ">
                 <img src="{{team.image.url}}" alt="">
-                <h3>{{team.full_name}}</h3>
+                <h3><a href="{% url 'managment_detail' team.full_name %}">{{team.full_name}}</a></h3>
                 <b>{{team.job_title}}</b>
                 
-                <a href="tel:{{team.phone}}"><img src="{% static 'allimages/IconЗрщту.png'%}" alt="">{{team.phone}}</a>
+                <a href="tel:{{team.phone}}"><img src="{% static 'allimages/iconph.png'%}" alt="">{{team.phone}}</a>
 
             </div>
             {% endfor %}

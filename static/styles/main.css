@@ -895,6 +895,20 @@ a {
   text-decoration: underline;
 }
 
+.manager {
+  margin: 0 5vmin;
+  margin-top: 15vmin;
+}
+.manager > .name > h1 {
+  text-align: center;
+}
+
+.search_text {
+  text-align: center;
+  margin-bottom: 2vmin !important;
+  margin-top: 15vmin;
+}
+
 .rukovod {
   margin-top: 15vmin;
 }
@@ -911,9 +925,10 @@ a {
   transform: scale(1.025);
   box-shadow: 0px 0px 42px rgba(0, 0, 0, 0.0980392157);
 }
-.rukovod__items h3 {
-  font-size: calc((1vh + 1vw) * 0.8);
+.rukovod__items h3 > a {
+  font-size: calc((1vh + 1vw) * 1.2) !important;
   margin-top: 7px;
+  text-transform: capitalize;
 }
 .rukovod__items > b {
   color: #538FFC;

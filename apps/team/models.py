@@ -14,6 +14,8 @@ class Team(models.Model):
         'Фото работника',
         upload_to='team/'
     )
+    resume = models.TextField()
+    resume_ru = models.TextField()
     phone = models.CharField(
         'Номер телефона',
         max_length=20
@@ -60,6 +62,23 @@ class Tourism(models.Model):
     class Meta:
         verbose_name = 'Для Туристов'
         verbose_name_plural = 'Для Туристов'
+
+class TourismMedia(models.Model):
+    image = models.ImageField(
+        'Фото для Туризма',
+        upload_to='tourism_media/'
+    )
+    tour = models.ForeignKey(
+        Tourism,
+        related_name='media',
+        on_delete=models.CASCADE
+    )
+    def __str__(self):
+        return f"Фото туризма: {self.id}"
+
+    class Meta:
+        verbose_name = 'Фото для туризма'
+        verbose_name_plural = 'Фото для туризма'
 
 class Corruption(models.Model):
     text = models.TextField()

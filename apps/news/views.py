@@ -3,6 +3,7 @@ from apps.news.models import News
 from apps.gallery.models import Image
 from django.db.models import Q
 from apps.team.models import Links, Images, GosLinks
+from apps.team.models import Team
 # Create your views here.
 def index(request):
     slider_news = News.objects.all().order_by('-id')[:2]
@@ -48,13 +49,16 @@ def news_detail(request, id):
 
 def search(request):
     news = News.objects.all()
+    team = Team.objects.all()
     links = Links.objects.latest('id')
     gos_links = GosLinks.objects.all()
     search_key = request.GET.get('search_key')
     if search_key:
         news = News.objects.all().filter(Q(title__icontains = search_key)| Q(description__icontains=search_key))
+        team = Team.objects.all().filter(Q(full_name__icontains = search_key)| Q(resume__icontains=search_key)| Q(resume_ru__icontains=search_key))
     context = {
         'news':news,
+        'team':team,
         'links':links,
         'gos_links':gos_links,
     }

@@ -40,14 +40,12 @@
     </div >
     <a href="{% url 'tourism' %}" class="header__menu-links adaps">{% trans "Туристтер үчүн" %}</a>
     <a href="#contacts" class="header__menu-links adaps">{% trans "Байланыштар" %}</a>
-    {% if all_news %}
     <form action="{% url 'search' %}">
       <div class="header__menu-search gl">
         <img src="{% static 'allimages/liupa.png'%}" alt="">
-        <input name="search_key" type="text">
+        <input name="search_key" type="text" >
       </div>
     </form>
-    {% endif %}
   </nav>
   <nav class="header__menu socials">
     <a href='https://instagram.com/osh_oblusu?igshid=MzRlODBiNWFlZA=='><img src="{% static 'allimages/instagtam.png'%}" alt=""></a>

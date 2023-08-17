@@ -104,10 +104,8 @@ msgid "Структура"
 msgstr "Структура"
 
 #: .\templates\includes\header.html:27 .\templates\includes\header.html:84
-#, fuzzy
-#| msgid "Мамлекеттик органдар"
 msgid "Мамлекеттик символдор"
-msgstr "Государственные органы"
+msgstr "Государственные символы"
 
 #: .\templates\includes\header.html:28 .\templates\includes\header.html:85
 msgid "Өнүктүрүү фонду"
