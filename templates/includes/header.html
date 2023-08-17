@@ -24,8 +24,8 @@
         <a href="{% url 'main_info' %}">{% trans "Негизги маалымат" %}</a>
         <a href="{% url 'managment' %}">{% trans "Жетекчилик" %}</a>
         <a href="{% url 'structs' %}">{% trans "Структура" %}</a>
-        <a href="{% url 'maps' %}">{% trans "Мамлекеттик символдор" %}</a>
-        <a href="{% url 'maps' %}">{% trans "Өнүктүрүү фонду" %}</a>
+        <a href="{% url 'state_symbols' %}">{% trans "Мамлекеттик символдор" %}</a>
+        <a href="{% url 'devfund' %}">{% trans "Өнүктүрүү фонду" %}</a>
       </div>
     </div>
 
@@ -40,12 +40,14 @@
     </div >
     <a href="{% url 'tourism' %}" class="header__menu-links adaps">{% trans "Туристтер үчүн" %}</a>
     <a href="#contacts" class="header__menu-links adaps">{% trans "Байланыштар" %}</a>
+    {% if all_news %}
     <form action="{% url 'search' %}">
       <div class="header__menu-search gl">
         <img src="{% static 'allimages/liupa.png'%}" alt="">
         <input name="search_key" type="text">
       </div>
     </form>
+    {% endif %}
   </nav>
   <nav class="header__menu socials">
     <a href='https://instagram.com/osh_oblusu?igshid=MzRlODBiNWFlZA=='><img src="{% static 'allimages/instagtam.png'%}" alt=""></a>
@@ -81,8 +83,8 @@
             <a href="{% url 'main_info' %}">{% trans "Негизги маалымат" %}</a>
             <a href="{% url 'managment' %}">{% trans "Жетекчилик" %}</a>
             <a href="{% url 'structs' %}">{% trans "Структура" %}</a>
-            <a href="{% url 'maps' %}">{% trans "Мамлекеттик символдор" %}</a>
-            <a href="{% url 'maps' %}">{% trans "Өнүктүрүү фонду" %}</a>
+            <a href="{% url 'state_symbols' %}">{% trans "Мамлекеттик символдор" %}</a>
+            <a href="{% url 'devfund' %}">{% trans "Өнүктүрүү фонду" %}</a>
         </div>
       </div>
     

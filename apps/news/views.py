@@ -31,6 +31,7 @@ def all_news(request):
         'news':news,
         'links':links,
         'gos_links':gos_links,
+        'all_news':True
     }
     return render(request, 'all_news.html', context)
 

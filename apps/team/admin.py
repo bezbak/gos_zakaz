@@ -9,7 +9,7 @@ class MainInfoAdminForm(forms.ModelForm):
     text_ru = forms.CharField(widget=CKEditorUploadingWidget())
     class Meta:
         model = MainInfo
-        fields = ('text',)
+        fields = ('text','text_ru')
 
 class MainInfoAdmin(admin.ModelAdmin):
     form = MainInfoAdminForm
@@ -19,7 +19,7 @@ class TourismAdminForm(forms.ModelForm):
     text_ru = forms.CharField(widget=CKEditorUploadingWidget())
     class Meta:
         model = Tourism
-        fields = ('text',)
+        fields = ('text','text_ru')
 
 class TourismAdmin(admin.ModelAdmin):
     form = TourismAdminForm
@@ -29,7 +29,7 @@ class CorruptionAdminForm(forms.ModelForm):
     text_ru = forms.CharField(widget=CKEditorUploadingWidget())
     class Meta:
         model = Corruption
-        fields = ('text',)
+        fields = ('text','text_ru')
 
 class CorruptionAdmin(admin.ModelAdmin):
     form = CorruptionAdminForm
