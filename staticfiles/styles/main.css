@@ -8,6 +8,7 @@
 body {
   background-color: #fdfeff !important;
 }
+
 .slider__item {
   width: 200px;
   height: 200px;
@@ -15,10 +16,6 @@ body {
   flex: 0 0 auto;
   scroll-snap-align: center;
   cursor: grab;
-}
-.slick-slider{
-  display: flex !important;
-  align-items: center !important;
 }
 
 .slider::-webkit-scrollbar {
@@ -34,9 +31,7 @@ body {
 }
 
 a {
-  font-size: calc((1vh + 1vw) * 0.6) ;
-  color: inherit;
-  text-decoration: none !important;
+  font-size: calc((1vh + 1vw) * 0.6) !important;
 }
 .lang_button img {
     width: 100% !important;
@@ -64,7 +59,8 @@ a {
   z-index: 10;
   top: 1%;
   background-color: rgba(16, 16, 16, 0.5450980392);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   border-radius: 1vmin;
   display: flex;
   justify-content: space-between;
@@ -72,6 +68,7 @@ a {
   gap: 5px;
 }
 .header__menu {
+  width: -moz-max-content;
   width: max-content;
   display: flex;
   align-items: center;
@@ -158,7 +155,8 @@ a {
 .header__menu-search img {
   width: calc((10vh + 10vw) * 0.07);
   height: calc((10vh + 10vw) * 0.08);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .header__menu-search input {
   width: 100%;
@@ -168,9 +166,9 @@ a {
   background-color: transparent;
   color: #fff;
 }
-
 .header .socials {
   gap: calc((10vh + 10vw) / 12);
+  width: -moz-max-content;
   width: max-content;
   align-items: center;
 }
@@ -218,7 +216,9 @@ a {
 .apparat {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
   position: absolute;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   background-color: #fff;
   left: 0;
@@ -343,7 +343,9 @@ a {
 .apparat2 {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
   position: absolute;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   background-color: #fff;
   left: 0;
@@ -416,9 +418,11 @@ a {
   transition: all 0.3s;
   transform: translateX(-110%);
   height: 100vh;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(0, 0, 0, 0.5058823529);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   position: fixed;
   z-index: 11;
   padding: 10% 5% 5%;
@@ -569,6 +573,7 @@ a {
 }
 .socials_b {
   margin-top: 30px;
+  height: -moz-fit-content !important;
   height: fit-content !important;
   display: flex;
 }
@@ -594,6 +599,7 @@ a {
 .containerr {
   width: 80%;
   margin: 0 auto;
+  height: -moz-fit-content !important;
   height: fit-content !important;
 }
 
@@ -669,7 +675,8 @@ a {
   border-radius: 7px;
   width: 60%;
   background-color: #538FFC;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .contentSlider__items-top .items-small {
   width: 40%;
@@ -682,15 +689,16 @@ a {
   border-radius: 5px;
   width: 100%;
   height: 48.6%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .contentSlider__items-bottom {
   width: 100%;
   height: 10%;
   padding: 4px 0;
-  font-size: calc((1vh + 1vw) * 0.8) !important;
-  color: #000;
+  font-size: calc((1vh + 1vw) * 0.8);
 }
 .contentSlider__items-date {
   color: #888888;
@@ -728,7 +736,8 @@ a {
   width: 100%;
   height: 70%;
   border-radius: 5px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .flexParent__items-bottom {
   height: 30%;
@@ -751,8 +760,6 @@ a {
   margin: 0 !important;
   line-height: 14px;
   transition: 0.4s;
-  color: #000 !important;
-  cursor: pointer;
 }
 .flexParent__items-bottom-desc:hover {
   color: #538FFC;
@@ -765,13 +772,15 @@ a {
 .lastItems > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 
 .itemsLinks {
   text-align: left !important;
   width: 250px;
+  height: -moz-fit-content !important;
   height: fit-content !important;
   padding-left: 10px;
   border-left: 0.1px solid #538FFC;
@@ -803,6 +812,7 @@ a {
   border-radius: 10px;
   padding: 2vmin;
   transition: all 0.5s;
+  height: -moz-fit-content !important;
   height: fit-content !important;
 }
 .rukovod__items:hover {
@@ -950,7 +960,6 @@ a {
 
 .newsDesc {
   font-size: calc((1vh + 1vw) * 0.8);
-  word-wrap: break-word;
 }
 
 .maps {
@@ -961,8 +970,8 @@ a {
 .newsTitile-image {
   width: 100%;
   height: 75vmin;
-  object-fit: cover;
-  margin-bottom: 3%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .itPark {
@@ -1374,7 +1383,8 @@ a {
   .lastItems > img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .flexParent__items {
     width: 249px;
@@ -1414,7 +1424,8 @@ a {
   .lastItems > img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
@@ -1473,6 +1484,4 @@ a {
   height: 57vmin;
   background-color: rgba(83, 207, 252, 0.1411764706) !important;
   box-shadow: 0px 0px 45px 34px rgba(83, 207, 252, 0.1411764706) !important;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
