@@ -1,9 +1,11 @@
 {% extends 'homepage.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
   {% include 'includes/header.html' %}
   <div class="containerr">
         <div class="container__inner pt50">
+          <h2 class="titles search_text">{% trans "Жаңылыктар" %}</h2>
             <div class="flexParent">
                 {% for news in news %}
                 <div class="flexParent__items">
@@ -16,6 +18,19 @@
                       </span>
                       <a href="{% url 'news_detail' news.id %}" class="flexParent__items-bottom-desc">{{news.title}}</a>
                     </div>
+                  </div>
+                  {% endfor %}
+              </div>
+              <h2 class="titles search_text">{% trans "Жетекчилик" %}</h2>
+              <div class="flexParent rukovod" style="margin-top:0!important;">
+                {% for team in team %}
+                  <div class="flexParent__items footerItems rukovod__items ">
+                      <img src="{{team.image.url}}" alt="">
+                      <h3><a href="{% url 'managment_detail' team.full_name %}">{{team.full_name}}</a></h3>
+                      <b>{{team.job_title}}</b>
+                      
+                      <a href="tel:{{team.phone}}"><img src="{% static 'allimages/iconph.png'%}" alt="">{{team.phone}}</a>
+      
                   </div>
                   {% endfor %}
               </div>

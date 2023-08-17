@@ -15,6 +15,19 @@ def managment(request):
     }
     return render(request, 'rukovodstvo.html', context)
 
+def managment_detail(request, full_name):
+    manager = Team.objects.get(full_name = full_name)
+    links = Links.objects.latest('id')
+    images = Images.objects.latest('id')
+    gos_links = GosLinks.objects.all()
+    context = {
+        'manager':manager,
+        'links':links,
+        'gos_links':gos_links,
+        'images':images,
+    }
+    return render(request, 'rukovodstvo_detail.html', context)
+
 def structs(request):
     struct = Struct.objects.all()
     links = Links.objects.latest('id')

@@ -965,6 +965,18 @@ a {
 
 }
 
+.manager{
+    margin: 0 5vmin;
+    margin-top: 15vmin;
+    >.name>h1{
+        text-align: center;
+    }
+}
+.search_text{
+    text-align: center;
+    margin-bottom: 2vmin !important;
+    margin-top: 15vmin;
+}
 .rukovod{
     margin-top: 15vmin;
     &__items{
@@ -980,9 +992,10 @@ a {
             box-shadow: 0px 0px 42px #00000019 ;
 
         }
-        h3{
-            font-size: calc($texts * .8);
+        h3 > a{
+            font-size: calc($texts * 1.2) !important;
             margin-top: 7px;
+            text-transform: capitalize  ;
         }
         >b{
             color: #538FFC;

@@ -11,9 +11,9 @@
           <div>
             {% get_current_language as LANGUAGE_CODE %}
             {% if LANGUAGE_CODE == 'ru' %}
-            {{corruption.text_ru|safe}}
+            {{devfund_text.text_ru|safe}}
             {% else %}
-            {{corruption.text|safe}}
+            {{devfund_text.text|safe}}
             {% endif %}
           </div>
     </div>

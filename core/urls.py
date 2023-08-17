@@ -11,6 +11,7 @@ urlpatterns = [
     path('', include('apps.news.urls')),
     path('gallery/', include('apps.gallery.urls')),
     path('team/', include('apps.team.urls')),
+    path('', include('apps.pages.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     prefix_default_language=False
 )

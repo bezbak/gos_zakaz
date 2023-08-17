@@ -9,6 +9,17 @@
     <div class="container__inner">
         <h1 class="titles" >- {% trans "Туристтер үчүн" %}</h1>
           <div>
+            <div class="news_slider">
+              {% for media in tourism.media.all %}
+                  <div class="slider-item"><img class="newsTitile-image" src="{{media.image.url}}" alt=""></div>
+              {% endfor %}
+            </div>
+            <div class="modal-overlay">
+                <div class="modal-adilet">
+                    <span class="close-btn">&times;</span>
+                    <img src="" alt="Zoomed Image" class="modal-image">
+                </div>
+            </div>
             {% get_current_language as LANGUAGE_CODE %}
             {% if LANGUAGE_CODE == 'ru' %}
             {{tourism.text_ru|safe}}
