@@ -11,7 +11,7 @@
                     <div class="flexParent__items-bottom">
                       <span>
                         <b class="datesBlue">{{news.created|date:"d"}}</b>
-                        <p>{{news.created|date:"M"}}</p>
+                        <p>{{news.created|date:"F"}}</p>
                         <p>{{news.created|date:"Y"}}</p>
                       </span>
                       <a href="{% url 'news_detail' news.id %}" class="flexParent__items-bottom-desc">{{news.title}}</a>

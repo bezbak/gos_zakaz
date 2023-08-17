@@ -8,7 +8,7 @@
   <div class="banner" style="background-image:url('{{images.main_image.url}}')!important;"></div>
   <div class="containerr">
     <div class="container__inner">
-      <h2 class="titles">- {% trans "Негизги окуялар" %}</h2>
+      <h2 class="titles">- {% trans "Негизги жаңылыктар" %}</h2>
 
       <!-- КАРУСЕЛ - #1 -->
       <div id="carouselExampleIndicators" class="carousel slide sliderrr">
@@ -28,7 +28,7 @@
               <div class="contentSlider__items">
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬇️⬇️⬇️ -->
-                <h3 class="contentSlider__items-date"><b class="datesBlue">{{slider__item.created|date:"d"}}</b> {{slider__item.created|date:"M"}}</h3>
+                <h3 class="contentSlider__items-date"><b class="datesBlue">{{slider__item.created|date:"d"}}</b> {{slider__item.created|date:"F"}}</h3>
                 <div class="contentSlider__items-top">
                   <img src="{{slider__item.image.url}}" style="width:100% !important;" class="items-big" alt="">
                 </div>
@@ -46,7 +46,7 @@
               <div class="contentSlider__items">
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬇️⬇️⬇️ -->
-                <h3 class="contentSlider__items-date"><b class="datesBlue">{{slider__item.created|date:"d"}}</b> {{slider__item.created|date:"M"}}</h3>
+                <h3 class="contentSlider__items-date"><b class="datesBlue">{{slider__item.created|date:"d"}}</b> {{slider__item.created|date:"F"}}</h3>
                 <div class="contentSlider__items-top">
                   <img src="{{slider__item.image.url}}" class="items-big" alt="">
                 </div>
@@ -81,7 +81,7 @@
           <div class="flexParent__items-bottom">
             <span>
               <b class="datesBlue">{{slider__item.created|date:"d"}}</b>
-              <p>{{slider__item.created|date:"M"}}</p>
+              <p>{{slider__item.created|date:"F"}}</p>
               <p>{{slider__item.created|date:"Y"}}</p>
             </span>
             <a href="{% url 'news_detail' slider__item.id %}" class="flexParent__items-bottom-desc">{{slider__item.title}}</a>
@@ -99,7 +99,7 @@
           <div class="flexParent__items-bottom">
             <span>
               <b class="datesBlue">{{news_item.created|date:"d"}}</b>
-              <p>{{news_item.created|date:"M"}}</p>
+              <p>{{news_item.created|date:"F"}}</p>
               <p>{{news_item.created|date:"Y"}}</p>
             </span>
             <a href="{% url 'news_detail' news_item.id %}" class="flexParent__items-bottom-desc">{{news_item.title}}</a>

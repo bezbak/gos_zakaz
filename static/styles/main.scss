@@ -1034,6 +1034,7 @@ a {
     }
 }
 .newsTitile{
+    position: relative;
     width: 85%;
     margin: 15vmin auto 3vmin auto;
     display: flex;
@@ -1041,24 +1042,31 @@ a {
     align-items: center;
     gap: 2%;
     &__date{
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
         >h2{
             color: $mainBlue;
+            margin: 0;
             font-weight: 600;
-            font-size: calc($texts * 1.4);
+            font-size: calc($texts * 1);
         }
         >h3{
             color: #888888;
+            margin: 0;
             font-size: calc($texts * 1);
         }
     }
     >span{
         display: block;
-        height: 13vmin;
+        height: calc((1vh + 1vw) * 1);
         width: 2px;
         background-color: #000;
     }
     >h4{
         font-size: calc($texts * 1);
+        margin: 0;
+        word-break: break-all;
     }
 }
 .newsDesc{
@@ -1076,9 +1084,9 @@ a {
     display: flex;
 }
 .newsTitile-image{
-        width: 100%;
-        height: 75vmin;
-        object-fit: cover;
+    width: 100%;
+    height: 55vmin !important;
+    object-fit: cover;
 }
 .itPark {
     width: 50%!important;
