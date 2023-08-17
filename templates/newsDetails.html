@@ -17,16 +17,22 @@
                 <h4>{{news.title}}</h4>
             </div>
             <div class="news_slider">
-                <img class="newsTitile-image" src="{{news.image.url}}" alt="">
+                <div class="slider-item"><img class="newsTitile-image" src="{{news.image.url}}" alt=""></div>
                 {% for media in news.media.all %}
-                    <img class="newsTitile-image" src="{{media.image.url}}" alt="">
+                    <div class="slider-item"><img class="newsTitile-image" src="{{news.image.url}}" alt=""></div>
                 {% endfor %}
+            </div>
+            <div class="modal-overlay">
+                <div class="modal-adilet">
+                    <span class="close-btn">&times;</span>
+                    <img src="" alt="Zoomed Image" class="modal-image">
+                </div>
             </div>
             {% get_current_language as LANGUAGE_CODE %}
             {% if LANGUAGE_CODE == 'ru' %}
-            <p class="newsDesc" >{{news.description_ru|safe}}</p>
+            <div class="newsDesc" >{{news.description_ru|safe}}</div>
             {% else %}
-            <p class="newsDesc" >{{news.description|safe}}</p>
+            <div class="newsDesc" >{{news.description|safe}}</div>
             {% endif %}
         </div>
     </div>

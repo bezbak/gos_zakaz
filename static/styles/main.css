@@ -5,6 +5,61 @@
   font-family: "Source Sans 3", sans-serif;
 }
 
+a {
+  font-size: calc((1vh + 1vw) * 0.6);
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.lang_button {
+  border: 0;
+  width: calc((20vh + 15vw) * 0.08);
+  height: calc((15vh + 10vw) * 0.08);
+  outline: none;
+}
+
+.lang_button img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.modal-adilet {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  font-size: 66px;
+  z-index: 2;
+  cursor: pointer;
+  color: #000;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .slick-list {
   width: 80%;
   margin: 0 15px !important;
@@ -25,6 +80,22 @@
   background-size: cover;
   border: none;
   background-color: transparent;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.slick-arrow:hover {
+  opacity: 1;
+}
+
+.slick-disabled {
+  opacity: 0.1;
+  transition: all 0.5s;
+}
+
+.slick-disabled:hover {
+  opacity: 0.1;
+  cursor: not-allowed !important;
 }
 
 .slick-next {
@@ -991,15 +1062,16 @@ a {
 
 .newsDesc {
   font-size: calc((1vh + 1vw) * 0.8);
+  padding: 0 50px;
+}
+.newsDesc > p {
+  font-size: calc((1vh + 1vw) * 1.4) !important;
+  word-break: break-all;
 }
 
 .maps {
   width: 100%;
   height: 90vmin;
-}
-
-.news_slider {
-  display: flex;
 }
 
 .slick-slider {
@@ -1443,8 +1515,8 @@ a {
 }
 @media (max-width: 620px) {
   .slick-arrow {
-    width: 22px;
-    height: 34px;
+    width: 22px !important;
+    height: 34px !important;
   }
   .strParent__items {
     height: 130px !important;
