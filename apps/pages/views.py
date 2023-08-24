@@ -44,3 +44,4 @@ def state_symbols(request):
     }
 
     return render(request, "police.html", context)
+

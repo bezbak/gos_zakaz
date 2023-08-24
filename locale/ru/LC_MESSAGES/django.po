@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-18 01:01+0600\n"
+"POT-Creation-Date: 2023-08-24 16:27+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,14 +40,17 @@ msgstr "Киргизский"
 msgid "Орусча"
 msgstr "Русский"
 
-#: .\templates\corruption.html:10 .\templates\dev_fund.html:10
-#: .\templates\includes\footer.html:18 .\templates\police.html:10
-#: .\templates\state_symbol.html:10
+#: .\templates\corruption.html:10 .\templates\includes\footer.html:18
 msgid "Коррупцияга каршы маалымат"
 msgstr "Информация о противодействии коррупции"
 
+#: .\templates\dev_fund.html:10 .\templates\includes\header.html:28
+#: .\templates\includes\header.html:88
+msgid "Өнүктүрүү фонду"
+msgstr "Фонд развития"
+
 #: .\templates\homepage.html:9 .\templates\includes\footer.html:16
-#: .\templates\includes\header.html:19 .\templates\includes\header.html:75
+#: .\templates\includes\header.html:19 .\templates\includes\header.html:78
 msgid "Башкы бет"
 msgstr "Главная"
 
@@ -64,11 +67,11 @@ msgid "Навигация"
 msgstr "Навигация"
 
 #: .\templates\includes\footer.html:17 .\templates\includes\header.html:20
-#: .\templates\includes\header.html:76
+#: .\templates\includes\header.html:79 .\templates\search.html:8
 msgid "Жаңылыктар"
 msgstr "Новости"
 
-#: .\templates\includes\footer.html:19
+#: .\templates\includes\footer.html:19 .\templates\police.html:10
 msgid "Купуялуулук саясаты"
 msgstr "Политика конфендициальности"
 
@@ -77,7 +80,7 @@ msgid "Мамлекет. сайттар"
 msgstr "Гос. сайты"
 
 #: .\templates\includes\footer.html:30 .\templates\includes\header.html:42
-#: .\templates\includes\header.html:101
+#: .\templates\includes\header.html:104
 msgid "Байланыштар"
 msgstr "Контакты"
 
@@ -85,33 +88,35 @@ msgstr "Контакты"
 msgid "Бардык укуктар корголгон ©2023"
 msgstr "Все права защищены ©2023"
 
-#: .\templates\includes\header.html:21 .\templates\includes\header.html:79
+#: .\templates\includes\header.html:7
+msgid "КРП Ош облусундагы ЫУӨ аппараты"
+msgstr "АППП КР в Ошской области"
+
+#: .\templates\includes\header.html:21 .\templates\includes\header.html:82
 msgid "Аппарат"
 msgstr "Аппарат"
 
-#: .\templates\includes\header.html:24 .\templates\includes\header.html:81
+#: .\templates\includes\header.html:24 .\templates\includes\header.html:84
 #: .\templates\mainInfo.html:10
 msgid "Негизги маалымат"
 msgstr "Основаная информация"
 
-#: .\templates\includes\header.html:25 .\templates\includes\header.html:82
+#: .\templates\includes\header.html:25 .\templates\includes\header.html:85
+#: .\templates\search.html:24
 msgid "Жетекчилик"
 msgstr "Руководство"
 
-#: .\templates\includes\header.html:26 .\templates\includes\header.html:83
+#: .\templates\includes\header.html:26 .\templates\includes\header.html:86
 #: .\templates\struktura.html:11
 msgid "Структура"
 msgstr "Структура"
 
-#: .\templates\includes\header.html:27 .\templates\includes\header.html:84
+#: .\templates\includes\header.html:27 .\templates\includes\header.html:87
+#: .\templates\state_symbol.html:10
 msgid "Мамлекеттик символдор"
 msgstr "Государственные символы"
 
-#: .\templates\includes\header.html:28 .\templates\includes\header.html:85
-msgid "Өнүктүрүү фонду"
-msgstr "Фонд развития"
-
-#: .\templates\includes\header.html:34 .\templates\includes\header.html:92
+#: .\templates\includes\header.html:34 .\templates\includes\header.html:95
 msgid "Жарандардын кайрылуусу"
 msgstr "Обращение граждан"
 
@@ -123,18 +128,18 @@ msgstr "Для авторизованных"
 msgid "Катталбаган жарандар үчүн"
 msgstr "Для неавторизованных"
 
-#: .\templates\includes\header.html:41 .\templates\includes\header.html:100
+#: .\templates\includes\header.html:41 .\templates\includes\header.html:103
 #: .\templates\tourism.html:10
 msgid "Туристтер үчүн"
 msgstr "Для туристов"
 
-#: .\templates\includes\header.html:94
+#: .\templates\includes\header.html:97
 #, fuzzy
 #| msgid "Туристтер үчүн"
 msgid "Уруксаты барлар үчүн"
 msgstr "Для туристов"
 
-#: .\templates\includes\header.html:95
+#: .\templates\includes\header.html:98
 #, fuzzy
 #| msgid "Туристтер үчүн"
 msgid "Уруксатсыздар үчүн"
