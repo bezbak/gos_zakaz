@@ -4,25 +4,21 @@
 
  
 <header class="header">
-  <div class="header__top">
+  {% comment %} <div class="header__top">
     <button onclick="txt_pilus()">-</button>
     <button onclick="txt_minus()">lol minus</button>
     <button onclick="img_minus()">lol img_minus</button>
     <button onclick="img_gray()">lol img_gray</button>
     <button onclick="img_default()">lol img_default</button>
-  </div>
+  </div> {% endcomment %}
   <nav class="header__menu">
     <div id="pagelinkBtn">
       <a href="#">{% trans "КРП Ош облусундагы ЫУӨ аппараты" %}</a>
       <img src="{% static 'allimages/Vector.png'%}" alt="vector">
       <div class="fixedNav">
-        <a href="#">Алай<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-        <a href="#">Араван<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-        <a href="#">Кара-Кулжа<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-        <a href="#">Кара-Суу<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-        <a href="#">Ноокат<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-        <a href="#">Узген<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
-        <a href="#">Чон-Алай<img src="{% static 'allimages/Vector.png'%}" alt=""></a>
+        {% for rayon in rayons %}
+          <a href="{% url 'rayon_detail' rayon.id %}">{{rayon.name}}</a>
+        {% endfor %}
       </div>
     </div>
     <a href="{% url 'index' %}" class="header__menu-links adaps">{% trans "Башкы бет" %}</a>
