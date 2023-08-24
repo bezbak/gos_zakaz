@@ -19,7 +19,7 @@
             <div class="news_slider">
                 <div class="slider-item"><img class="newsTitile-image" src="{{news.image.url}}" alt=""></div>
                 {% for media in news.media.all %}
-                    <div class="slider-item"><img class="newsTitile-image" src="{{news.image.url}}" alt=""></div>
+                    <div class="slider-item"><img class="newsTitile-image" src="{{media.image.url}}" alt=""></div>
                 {% endfor %}
             </div>
             <div class="modal-overlay">

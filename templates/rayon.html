@@ -7,13 +7,13 @@
 
   <div class="containerr">
     <div class="container__inner">
-        <h1 class="titles" >- {% trans "Мамлекеттик символдор" %}</h1>
+        <h1 class="titles" >- {{rayon.name}}</h1>
           <div>
             {% get_current_language as LANGUAGE_CODE %}
             {% if LANGUAGE_CODE == 'ru' %}
-            {{state_symbols_text.text_ru|safe}}
+            {{rayon.text_ru|safe}}
             {% else %}
-            {{state_symbols_text.text|safe}}
+            {{rayon.text|safe}}
             {% endif %}
           </div>
     </div>

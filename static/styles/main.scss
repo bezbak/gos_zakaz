@@ -10,6 +10,13 @@ a{
     color: inherit;
     text-decoration: none !important;
 }
+
+.img_none{
+    display: none;
+}
+.img_gray{
+    filter: grayscale(1);
+}
 .lang_button{
     border: 0;
     width: calc((20vh + 15vw) * 0.08);
@@ -359,7 +366,7 @@ a {
 
 
 .banner {
-    height: 95vmin;
+    height: 50vmin;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -696,9 +703,6 @@ a {
     .adaps{
         display: none !important;
     }
-    .socials{
-        display: none;
-    }
     #oso{
         display: none;
     }
@@ -821,6 +825,7 @@ a {
                 width: 100%;
                 background-color: #538FFC;
                 object-fit: cover;
+                height: 50vmin !important;
             }
 
             .items-small {
@@ -1193,7 +1198,7 @@ a {
     padding: 2vmin;
     margin-top: 2%;
     background-color: #fff;
-    font-size: calc($texts * 1);
+    font-size: calc($texts * .6);
 }
 
 .gap {
@@ -1583,6 +1588,9 @@ a {
 @media (max-width:1500px) {
     .containerr {
         width: 1270px;
+    }
+    .socials{
+        display: none;
     }
 }
 

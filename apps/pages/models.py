@@ -27,3 +27,16 @@ class DevFund(models.Model):
     class Meta:
         verbose_name = 'Фонд развития'
         verbose_name_plural = 'Фонды развития'
+
+class Rayons(models.Model):
+    name = models.CharField(
+        verbose_name='Название района',
+        max_length=50
+    )
+    text = models.TextField()
+    text_ru = models.TextField()
+    def __str__(self):
+        return f":Район {self.name}"
+    class Meta:
+        verbose_name = 'Район'
+        verbose_name_plural = 'Районы'

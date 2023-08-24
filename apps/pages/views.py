@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from apps.team.models import Links, GosLinks,Images
-from apps.pages.models import Police, DevFund, StateSymbols
+from apps.pages.models import Police, DevFund, StateSymbols, Rayons
 # Create your views here.
 
 def policy(request):
@@ -44,3 +44,17 @@ def state_symbols(request):
     }
 
     return render(request, "police.html", context)
+
+def rayon_detail(request, id):
+    rayon = Rayons.objects.get(id=id)
+    links = Links.objects.latest('id')
+    images = Images.objects.latest('id')
+    gos_links = GosLinks.objects.all()
+    context = {
+        'rayon':rayon,
+        'links':links,
+        'gos_links':gos_links,
+        'images':images,
+    }
+    return render(request, "rayon.html", context)
+    

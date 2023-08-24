@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django import forms
+from modeltranslation.admin import TranslationAdmin
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
-from apps.pages.models import Police, DevFund, StateSymbols
+from apps.pages.models import Police, DevFund, StateSymbols, Rayons
 # Register your models here.
 class PoliceAdminForm(forms.ModelForm):
     text = forms.CharField(widget=CKEditorUploadingWidget())
@@ -34,3 +35,14 @@ class StateSymbolsAdminForm(forms.ModelForm):
 @admin.register(StateSymbols)
 class StateSymbolsAdmin(admin.ModelAdmin):
     form = StateSymbolsAdminForm
+
+class RayonsAdminForm(forms.ModelForm):
+    text = forms.CharField(widget=CKEditorUploadingWidget())
+    text_ru = forms.CharField(widget=CKEditorUploadingWidget())
+    class Meta:
+        model = Rayons
+        fields = "__all__"
+
+class RayonsAdmin(TranslationAdmin):
+    form = RayonsAdminForm
+admin.site.register(Rayons, RayonsAdmin)
