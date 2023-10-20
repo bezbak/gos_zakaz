@@ -71,3 +71,48 @@ slider.addEventListener('mousemove', (e) => {
   slider.scrollLeft = scrollLeft - walk; 
 }); 
 
+function txt_pilus() {
+  let elements = document.querySelectorAll('*'); 
+
+  for (let i = 0; i < elements.length; i++) {
+      let currentFontSize = window.getComputedStyle(elements[i], null).getPropertyValue('font-size');
+      let newSize = (parseFloat(currentFontSize) + 2) + 'px'; 
+
+      elements[i].style.fontSize = newSize;
+  }
+}
+
+function txt_minus() {
+  let elements = document.querySelectorAll('*'); 
+
+  for (let i = 0; i < elements.length; i++) {
+      let currentFontSize = window.getComputedStyle(elements[i], null).getPropertyValue('font-size');
+      let newSize = (parseFloat(currentFontSize) - 2) + 'px'; 
+
+      elements[i].style.fontSize = newSize;
+  }
+}
+
+function img_minus() {
+  let img = document.querySelectorAll('img')
+  img.forEach(e=>{
+      e.classList.add('img_none')
+      e.classList.remove('img_gray')
+  })
+}
+
+function img_gray() {
+  let img = document.querySelectorAll('img')
+  img.forEach(e=>{
+      e.classList.remove('img_none')
+      e.classList.add('img_gray')
+  })
+}
+
+function img_default() {
+  let img = document.querySelectorAll('img')
+  img.forEach(e=>{
+      e.classList.remove('img_none')
+      e.classList.remove('img_gray')
+  })
+}
