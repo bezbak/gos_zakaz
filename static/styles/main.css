@@ -19,11 +19,21 @@ a {
   filter: grayscale(1);
 }
 
+.header__menu-nav {
+  display: flex;
+  gap: 10px;
+}
+
 .lang_button {
   border: 0;
   width: calc((20vh + 15vw) * 0.08);
   height: calc((15vh + 10vw) * 0.08);
   outline: none;
+}
+
+.lang_button-nav {
+  width: 24px;
+  height: 24px;
 }
 
 .lang_button img {
