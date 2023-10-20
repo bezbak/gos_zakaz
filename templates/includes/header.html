@@ -2,8 +2,9 @@
 {% load i18n %}
 
 
- 
+
 <header class="header">
+  
   {% comment %} <div class="header__top">
     <button onclick="txt_pilus()">-</button>
     <button onclick="txt_minus()">lol minus</button>
@@ -11,7 +12,9 @@
     <button onclick="img_gray()">lol img_gray</button>
     <button onclick="img_default()">lol img_default</button>
   </div> {% endcomment %}
+
   <nav class="header__menu">
+    
     <div id="pagelinkBtn">
       <a href="#">{% trans "КРП Ош облусундагы ЫУӨ аппараты" %}</a>
       <img src="{% static 'allimages/Vector.png'%}" alt="vector">
@@ -45,9 +48,11 @@
     </div >
     <a href="{% url 'tourism' %}" class="header__menu-links adaps">{% trans "Туристтер үчүн" %}</a>
     <a href="#contacts" class="header__menu-links adaps">{% trans "Байланыштар" %}</a>
-    <img class="header__menu-links adaps" style="width: calc((1vh + 1vw) * 2) !important;
+    <button settings_active class="editorBtn">
+      <img settings_active class="header__menu-links" style="width: calc((1vh + 1vw) * 2) !important;
     cursor: pointer;
     padding: 0;" src="{% static 'allimages/glasses.png' %}"/>
+    </button>
     <form action="{% url 'search' %}" >
       <div class="header__menu-search gl">
         <img src="{% static 'allimages/liupa.png'%}" alt="">
@@ -107,9 +112,11 @@
     
     <a href="{% url 'tourism' %}" class="header__menu-links">{% trans "Туристтер үчүн" %}</a>
     <a href="#contacts" class="header__menu-links">{% trans "Байланыштар" %}</a>
-    <img class="header__menu-links" style="width: calc((1vh + 1vw) * 2) !important;
+    <button settings_active class="editorBtn">
+      <img settings_active class="header__menu-links" style="width: calc((1vh + 1vw) * 2) !important;
     cursor: pointer;
     padding: 0;" src="{% static 'allimages/glasses.png' %}"/>
+    </button>
     
     <nav class="header__menu-nav ">
       <a style='max-width: 25px !important;' href='https://instagram.com/osh_oblusu?igshid=MzRlODBiNWFlZA=='><img style='max-width: 25px !important;'  src="{% static 'allimages/instagtam.png'%}" alt=""></a>
