@@ -125,7 +125,7 @@ a {
 }
 
 .slider_title_text {
-  font-size: calc((1vh + 3vw) * 0.8) !important;
+  font-size: calc((1vh + 2.5vw) * 0.8) !important;
 }
 
 .flexParent__items-bottom-desc {
