@@ -114,6 +114,14 @@ a {
   background-image: url("../allimages/Vector-l.png");
 }
 
+.slider_title_text {
+  font-size: calc((1vh + 4vw) * 0.8) !important;
+}
+
+.flexParent__items-bottom-desc {
+  font-size: calc((1vh + 2.3vw) * 0.8) !important;
+}
+
 body {
   background-color: #fdfeff !important;
 }
@@ -140,7 +148,7 @@ body {
 }
 
 a {
-  font-size: calc((1vh + 1vw) * 0.6) !important;
+  font-size: calc((1vh + 1vw) * 0.6);
 }
 
 .gl {
@@ -771,10 +779,10 @@ a {
 .contentSlider__items-top .items-big {
   border-radius: 7px;
   width: 100%;
-  background-color: #538FFC;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 50vmin !important;
+  background-color: transparent;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 60vmin !important;
 }
 .contentSlider__items-top .items-small {
   width: 40%;
@@ -838,16 +846,18 @@ a {
      object-fit: cover;
 }
 .flexParent__items-bottom {
+  margin-top: 15px;
   height: 30%;
   width: 100%;
   display: flex;
-  align-items: flex-end;
-  gap: 10px;
-  justify-content: space-between;
+  gap: 15px;
+  flex-direction: column;
 }
 .flexParent__items-bottom > span {
-  display: block;
+  display: flex;
   width: 15%;
+  align-items: center;
+  gap: 10px;
 }
 .flexParent__items-bottom > span > p {
   margin: 0 !important;
