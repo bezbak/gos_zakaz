@@ -34,7 +34,7 @@
                 </div>
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
-                <a href="{% url 'news_detail' slider__item.id %}" class="contentSlider__items-bottom">
+                <a href="{% url 'news_detail' slider__item.id %}" class="contentSlider__items-bottom slider_title_text">
                   {{slider__item.title}}
                 </a>
               </div>
@@ -48,11 +48,11 @@
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬇️⬇️⬇️ -->
                 <h3 class="contentSlider__items-date"><b class="datesBlue">{{slider__item.created|date:"d"}}</b> {{slider__item.created|date:"F"}}</h3>
                 <div class="contentSlider__items-top">
-                  <img src="{{slider__item.image.url}}" class="items-big" alt="">
+                  <img src="{{slider__item.image.url}}" style="width:100% !important;" class="items-big" alt="">
                 </div>
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ ⬆️⬆️⬆️ -->
                 <!-- ЗДЕСЬ КОНТЕНТ КАРУСЕЛЬ -->
-                <a href="{% url 'news_detail' slider__item.id %}" class="contentSlider__items-bottom">
+                <a href="{% url 'news_detail' slider__item.id %}" class="contentSlider__items-bottom slider_title_text">
                   {{slider__item.title}}
                 </a>
               </div>
@@ -79,12 +79,12 @@
         <div class="slider__item flexParent__items">
           <img src="{{slider__item.image.url}}" alt="">
           <div class="flexParent__items-bottom">
+            <a href="{% url 'news_detail' slider__item.id %}" class="flexParent__items-bottom-desc">{{slider__item.title}}</a>
             <span>
               <b class="datesBlue">{{slider__item.created|date:"d"}}</b>
               <p>{{slider__item.created|date:"F"}}</p>
               <p>{{slider__item.created|date:"Y"}}</p>
             </span>
-            <a href="{% url 'news_detail' slider__item.id %}" class="flexParent__items-bottom-desc">{{slider__item.title}}</a>
           </div>
         </div>
         {% endfor %}

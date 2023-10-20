@@ -7,6 +7,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% trans "Башкы бет" %}</title>
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(95320704, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
   <link rel="stylesheet" href="{% static 'styles/main.css'%}">
   <link rel="shortcut icon" href="{% static 'allimages/Gerb.png'%}" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,8 +81,10 @@
     
     {% endblock content %}
     
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>  
     
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>  
+    <noscript><div><img src="https://mc.yandex.ru/watch/95320704" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="{%static 'scripts/slider.js'%}"></script>
 </body>

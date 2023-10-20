@@ -111,7 +111,7 @@
     cursor: pointer;
     padding: 0;" src="{% static 'allimages/glasses.png' %}"/>
     
-    <nav class="header__menu socials socials_b">
+    <nav class="header__menu-nav ">
       <a style='max-width: 25px !important;' href='https://instagram.com/osh_oblusu?igshid=MzRlODBiNWFlZA=='><img style='max-width: 25px !important;'  src="{% static 'allimages/instagtam.png'%}" alt=""></a>
       <a style='max-width: 25px !important;' href='https://www.facebook.com/Oshoblasty?mibextid=ZbWKwL'><img style='max-width: 25px !important;'  src="{% static 'allimages/faceBook.png'%}" alt=""></a>
       <a style='max-width: 25px !important;' href="https://vt.tiktok.com/ZSLXSdK8t/"><img style='max-width: 25px !important;'  src="{% static 'allimages/TikTok.png'%}" alt=""></a>
@@ -124,7 +124,7 @@
               {% for language in languages %}
                     {% if language.code == LANGUAGE_CODE %} 
                     {% else %}
-                    <button class='lang_button' value="{{ language.code }}" name="language" type="submit"><img src="/static/allimages/{{language.code}}.png" /></button>
+                    <button class='lang_button lang_button-nav' value="{{ language.code }}" name="language" type="submit"><img src="/static/allimages/{{language.code}}.png" /></button>
                     {% endif %}
                 {% endfor %}
         </form>
