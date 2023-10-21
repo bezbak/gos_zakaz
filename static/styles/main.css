@@ -1229,7 +1229,6 @@ a {
 }
 
 .newsDesc {
-  font-size: calc((1vh + 1vw) * 0.8);
   padding: 0 50px;
 }
 .newsDesc > p {
@@ -1731,7 +1730,7 @@ a {
     height: 100%;
   }
   .flexParent__items-bottom {
-    gap: 0;
+    gap: 0 !important;
   }
 }
 @media (max-width: 495px) {
