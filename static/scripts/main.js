@@ -48,29 +48,31 @@ const slider = document.querySelector('.slider');
 let isDown = false; 
 let startX; 
 let scrollLeft; 
+if (slider) {
+  
+  slider.addEventListener('mousedown', (e) => { 
+    isDown = true; 
+    startX = e.pageX - slider.offsetLeft; 
+    scrollLeft = slider.scrollLeft; 
+  }); 
 
-slider.addEventListener('mousedown', (e) => { 
-  isDown = true; 
-  startX = e.pageX - slider.offsetLeft; 
-  scrollLeft = slider.scrollLeft; 
-}); 
+  slider.addEventListener('mouseleave', () => { 
+    isDown = false; 
+  }); 
 
-slider.addEventListener('mouseleave', () => { 
-  isDown = false; 
-}); 
+  slider.addEventListener('mouseup', () => { 
+    isDown = false; 
+  }); 
 
-slider.addEventListener('mouseup', () => { 
-  isDown = false; 
-}); 
+  slider.addEventListener('mousemove', (e) => { 
+    if (!isDown) return; 
+    e.preventDefault(); 
+    const x = e.pageX - slider.offsetLeft; 
+    const walk = (x - startX) * 2; // adjust scrolling speed here 
+    slider.scrollLeft = scrollLeft - walk; 
+  }); 
 
-slider.addEventListener('mousemove', (e) => { 
-  if (!isDown) return; 
-  e.preventDefault(); 
-  const x = e.pageX - slider.offsetLeft; 
-  const walk = (x - startX) * 2; // adjust scrolling speed here 
-  slider.scrollLeft = scrollLeft - walk; 
-}); 
-
+}
 function txt_pilus() {
   let elements = document.querySelectorAll('*'); 
 
@@ -137,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function updateDateTime() {
     const datetimeElement = document.getElementById("datetime");
     const currentDateTime = getCurrentDateTime();
-    datetimeElement.textContent = currentDateTime;
+    if(datetimeElement)datetimeElement.textContent = currentDateTime;
   }
 
   // Обновляем дату и время сразу после загрузки страницы

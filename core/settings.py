@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     #!apps
     'apps.news',
     'apps.team',
-    'apps.gallery',
     'apps.pages',
 ]
 

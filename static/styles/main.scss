@@ -980,6 +980,7 @@ a {
 }
 
 .datesBlue {
+    font-size: calc($texts *1);;
     color: #538FFC !important;
 }
 
@@ -1930,7 +1931,15 @@ a {
     }
     .flexParent__items {
         width: 199px;
-        height: 185px;
+        height: 100% !important;
+        max-height: 205px;
+        > img{
+            height: 100%;
+        }
+
+    }
+    .flexParent__items-bottom{
+        gap: 0;
     }
 }
 
