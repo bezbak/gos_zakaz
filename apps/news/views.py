@@ -7,7 +7,7 @@ from apps.team.models import Team
 def index(request):
     slider_news = News.objects.all().order_by('-id')[:2]
     month_news = News.objects.all().order_by('-id')[3:7]
-    all_news = News.objects.all()
+    all_news = News.objects.all()[:20]
     slider2_news = News.objects.all()[:12]
     links = Links.objects.latest('id')
     gos_links = GosLinks.objects.all()
@@ -62,3 +62,16 @@ def search(request):
         'gos_links':gos_links,
     }
     return render(request, 'search.html', context )
+
+def gallery(request):
+    news = News.objects.all()
+    links = Links.objects.latest('id')
+    images = Images.objects.latest('id')
+    gos_links = GosLinks.objects.all()
+    context = {
+        'news':news,
+        'links':links,
+        'gos_links':gos_links,
+        'images':images,
+    }
+    return render(request, 'gallery.html', context)
