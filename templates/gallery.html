@@ -1,0 +1,24 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  {% include 'includes/header.html' %}
+
+  <div class="banner" style="background-image:url('{{images.main_image.url}}')!important;"></div>
+
+  <div class="containerr">
+    <div class="container__inner">
+        <h1 class="titles" >- {% trans "Фото баян" %}</h1>
+            <div class="strParent">
+              <div class="gallery__items">
+                  {% for image in news %}
+                    <img src="{{image.image.url}}" alt="">
+                    {% endfor %}
+                </div>
+            </div>
+    </div>
+  </div>
+  {% include 'includes/footer.html' %}
+
+
+  {% endblock content %}
