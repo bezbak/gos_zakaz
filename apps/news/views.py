@@ -1,6 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from apps.news.models import News
-from apps.gallery.models import Image
 from django.db.models import Q
 from apps.team.models import Links, Images, GosLinks
 from apps.team.models import Team
@@ -8,8 +7,8 @@ from apps.team.models import Team
 def index(request):
     slider_news = News.objects.all().order_by('-id')[:2]
     month_news = News.objects.all().order_by('-id')[3:7]
+    all_news = News.objects.all()
     slider2_news = News.objects.all()[:12]
-    gallery = Image.objects.all()
     links = Links.objects.latest('id')
     gos_links = GosLinks.objects.all()
     images = Images.objects.latest('id')
@@ -17,9 +16,9 @@ def index(request):
         'slider_news':slider_news,
         'month_news':month_news,
         'slider2_news':slider2_news,
-        'gallery':gallery,
         'links':links,
         'gos_links':gos_links,
+        'all_news':all_news,
         'images':images,
     }
     return render(request, 'index.html', context)

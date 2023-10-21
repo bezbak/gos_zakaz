@@ -9,7 +9,6 @@ urlpatterns = [
 ] + i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
     path('', include('apps.news.urls')),
-    path('gallery/', include('apps.gallery.urls')),
     path('team/', include('apps.team.urls')),
     path('', include('apps.pages.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),

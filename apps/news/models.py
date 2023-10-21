@@ -19,9 +19,7 @@ class News(models.Model):
     description_ru = models.TextField(
         _('Жаңылыктын сүрөттөлүшү')
     )
-    created = models.DateField(
-        auto_now_add=True
-    )
+    created = models.DateTimeField(null=True)
     
     def __str__(self):
         return f'Новость: {self.title} || Дата {self.created}'
