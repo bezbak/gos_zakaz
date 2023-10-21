@@ -1274,7 +1274,6 @@ a {
     }
 }
 .newsDesc{
-    font-size: calc($texts * .8);
     padding: 0 50px;
     >p{
         word-break: break-all   ;
@@ -1939,7 +1938,7 @@ a {
 
     }
     .flexParent__items-bottom{
-        gap: 0;
+        gap: 0 !important;
     }
 }
 
