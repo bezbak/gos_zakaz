@@ -56,6 +56,19 @@ a {
   border: none;
   background-color: transparent;
 }
+.editorBtn > button {
+  border-radius: 5px;
+  transition: background-color 0.8s;
+  background-color: #e0e0e0;
+  padding: 10px 15px;
+}
+.editorBtn > button:hover {
+  background-color: #b6b6b6;
+}
+.editorBtn > button > img {
+  width: 25px;
+  height: 25px;
+}
 
 .body_bg_btn {
   padding: 0.375rem 0.75rem;
@@ -70,10 +83,13 @@ a {
   padding: 10px;
   justify-content: center;
   gap: 30px;
+  transition: all 0.5s;
 }
 
 .editPanel.active {
   display: flex;
+  flex-wrap: wrap;
+  top: 9.6vmin;
 }
 
 .editPanel .block {
@@ -314,9 +330,6 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 5px;
-}
-.header.active {
-  top: 11%;
 }
 .header__menu {
   width: -moz-max-content;
@@ -1579,6 +1592,14 @@ a {
     width: 230px;
   }
 }
+@media (max-width: 1370px) {
+  .editPanel {
+    gap: 15px;
+  }
+  .editorBtn > button > img {
+    width: 20px;
+  }
+}
 @media (max-width: 1100px) {
   .strParent__items {
     height: 160px !important;
@@ -1646,6 +1667,9 @@ a {
   .strParent__items {
     height: 140px !important;
     width: 100% !important;
+  }
+  .editorBtn > button {
+    padding: 5px 10px;
   }
   .containerr {
     width: 85%;
@@ -1756,6 +1780,10 @@ a {
   .flexParent__items {
     width: 179px;
     height: 194px;
+  }
+  .editorBtn > button {
+    margin: 0;
+    padding: 4px 10px;
   }
 }
 @media (max-width: 445px) {

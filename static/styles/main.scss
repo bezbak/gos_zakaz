@@ -47,6 +47,19 @@ a{
 .editorBtn{
     border: none;
     background-color: transparent;
+    >button{
+        border-radius: 5px;
+        transition: background-color .8s;
+        background-color: #e0e0e0;
+        padding: 10px 15px;
+        &:hover{
+            background-color: #b6b6b6;
+        }
+        >img{
+        width: 25px;
+        height: 25px;
+    }
+}
 }
 .body_bg_btn{
     padding: 0.375rem 0.75rem;
@@ -60,9 +73,13 @@ a{
     padding: 10px;
     justify-content: center;
     gap: 30px;
+    transition: all .5s ;
 }
 .editPanel.active{
     display: flex;
+    flex-wrap: wrap;
+    top: 9.6vmin
+
 }
 .editPanel .block{
     display: flex;
@@ -284,9 +301,6 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 5px;
-    &.active{
-        top: 11%;
-    }
     &__menu {
         width: max-content;
         display: flex;
@@ -1725,6 +1739,7 @@ a {
     .socials{
         display: none;
     }
+
 }
 
 @media (max-width:1276px) {
@@ -1744,6 +1759,19 @@ a {
         width: 230px;
     }
 }
+@media (max-width:1370px) {
+    .editPanel{
+        gap: 15px;
+    }
+    .editorBtn{
+        >button{
+            >img{
+                width: 20px;
+            }
+        }
+    }
+}
+
 
 @media (max-width:1100px) {
     .strParent__items{
@@ -1829,6 +1857,11 @@ a {
     .strParent__items{
         height: 140px !important;
        width: 100% !important;
+    }
+    .editorBtn{
+        >button{
+            padding: 5px 10px;
+        }
     }
     .containerr {
         width: 85%;
@@ -1963,6 +1996,12 @@ a {
     .flexParent__items {
         width: 179px;
         height: 194px;
+    }
+    .editorBtn{
+        >button{
+            margin: 0;
+            padding: 4px 10px;
+        }
     }
 }
 
