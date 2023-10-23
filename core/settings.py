@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     #!modules
     'ckeditor',
     'ckeditor_uploader',
+    'multiupload',
 
     #!apps
     'apps.news',

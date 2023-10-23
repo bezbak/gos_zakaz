@@ -76,75 +76,7 @@
 </head>
 
 <body>
-  <div class="for_downes">
-    <div class="editPanel editorBtn">
-
-      <div class="block editorBtn">
-          <h4 class="editorBtn">Размер шрифта</h4>
-          <div class="editorBtn">
-              <button class="editorBtn" onclick="txt_pilus()">A+</button>
-              <button class="editorBtn" onclick="txt_minus()">A-</button>
-          </div>
-      </div>
-    
-      <div class="block editorBtn">
-          <h4 class="editorBtn">Изображения</h4>
-          <div class="editorBtn">
-              <button class="editorBtn" onclick="img_default()"><img width="15" class="editorBtn" src="https://www.naryn.gov.kg/view/visually_impaired/img/image.svg" alt=""></button>
-              <button class="editorBtn" onclick="img_minus()"><img width="15" class="editorBtn" src="https://www.naryn.gov.kg/view/visually_impaired/img/minus-circle.svg" alt=""></button>
-              <button class="editorBtn" onclick="img_gray()"><img width="15" class="editorBtn" src="https://www.naryn.gov.kg/view/visually_impaired/img/adjust.svg" alt=""></button>    
-          </div>
-      </div>
-    
-      <div class="block editorBtn">
-          <h4 class="editorBtn">Цвета сайта</h4>
-          <div class="editorBtn">
-              <button class="editorBtn body_bg_btn body_bg_btn_1" onclick="body_bg(1)">Ц</button>
-              <button class="editorBtn body_bg_btn body_bg_btn_2" onclick="body_bg(2)">Ц</button>
-              <button class="editorBtn body_bg_btn body_bg_btn_3" onclick="body_bg(3)">Ц</button>
-              <button class="editorBtn body_bg_btn body_bg_btn_4" onclick="body_bg(4)">Ц</button>
-              <button class="editorBtn body_bg_btn body_bg_btn_5" onclick="body_bg(5)">Ц</button>
-          </div>
-      </div>
-    
-      <div class="block editorBtn">
-          <h4 class="editorBtn">Настройки</h4>
-          <div class="editorBtn">
-              <button settings_open class="editorBtn "><img settings_open class="editorBtn" width="10" src="https://www.naryn.gov.kg/view/visually_impaired/img/cog.svg" alt=""></button>
-              <button settings_default class="editorBtn ">Обычная версия сайта</button>
-              <button settings_deactive class="editorBtn "><img settings_deactive class="editorBtn" width="10" src="https://www.naryn.gov.kg/view/visually_impaired/img/minus.svg" alt=""></button>
-          </div>
-      </div>
-    </div>
-    
-    <div class="editorSettingsBG editorBtn" settings_open>
-      <div class="editorSettings editorBtn">
-          <div class="block editorBtn">
-              <h4 class="editorBtn">Межбуквенное расстояние</h4>
-              <div class="editorBtn">
-                  <button class="editorBtn" onclick="txt_letter(1)">default</button>
-                  <button class="editorBtn" onclick="txt_letter(2)">medium</button>
-                  <button class="editorBtn" onclick="txt_letter(3)">big</button>
-              </div>
-          </div>
-          <div class="block editorBtn">
-              <h4 class="editorBtn">Межстрочный интервал</h4>
-              <div class="editorBtn">
-                  <button class="editorBtn" onclick="txt_line(1)">default</button>
-                  <button class="editorBtn" onclick="txt_line(2)">medium</button>
-                  <button class="editorBtn" onclick="txt_line(3)">big</button>
-              </div>
-          </div>
-          <div class="block editorBtn">
-              <h4 class="editorBtn">Шрифт</h4>
-              <div class="editorBtn">
-                  <button class="editorBtn" onclick="txt_family(1)">с засечками</button>
-                  <button class="editorBtn" onclick="txt_family(2)">без засечек</button>
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>
+    {% include "includes/for_blynds.html" %}
 
     {% block content %}
     
