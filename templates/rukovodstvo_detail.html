@@ -5,25 +5,14 @@
   {% include 'includes/header.html' %}
   <div class="containerr">
     <div class="container__inner">
-
-        <!-- <div class="flexParent rukovod">
-            <div class="flexParent__items footerItems rukovod__items ">
-                <img src="{{manager.image.url}}" alt="">
-                <h3>{{manager.full_name}}</h3>
-                <b>{{manager.job_title}}</b>
-                
-                <a href="tel:{{manager.phone}}"><img src="{% static 'allimages/IconЗрщту.png'%}" alt="">{{manager.phone}}</a>
-
-            </div>
-        </div> -->
         <div class="manager">
           <div class="name">
             <h1>{{manager.job_title}}</h1>
           </div>
           <div class="descr">
             <img src="{{manager.image.url}}" alt="">
-            <h2>{{manager.full_name}}</h2>
             <div>
+              <h2>{{manager.full_name}}</h2>
               {% get_current_language as LANGUAGE_CODE %}
               {% if LANGUAGE_CODE == 'ru' %}
               {{manager.resume_ru|safe}}

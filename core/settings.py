@@ -140,6 +140,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 CKEDITOR_CONFIGS = {
     'default': {
+        'font-size':'24px',
         'skin': 'moono',
         # 'skin': 'office2013',
         'toolbar_Basic': [

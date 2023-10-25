@@ -1122,6 +1122,19 @@ a {
 .manager{
     margin: 0 5vmin;
     margin-top: 15vmin;
+    p{
+        word-break: break-all;
+    }
+    >.descr{
+        display: flex;
+        gap: 0 15px;
+        >div{
+            width: 100%;
+        }
+        >img{
+            width: 20%;
+        }
+    }
     >.name>h1{
         text-align: center;
     }
@@ -1357,6 +1370,9 @@ a {
 }
 
 @media (min-width:2453px) and (max-width:3000px) {
+    .rukovod__items{
+        width: 360px !important;
+    }
     .flexParent {
         &__items {
             width: 622px;
@@ -1647,7 +1663,7 @@ a {
 @media (min-width:1587px) and (max-width:1687px) {
     .flexParent {
         &__items {
-            width: 372px;
+            width: 242px;
             height: 367px;
 
             &-bottom {
@@ -1733,6 +1749,9 @@ a {
 }
 
 @media (max-width:1500px) {
+    .rukovod__items{
+        width: 360px !important;
+    }
     .containerr {
         width: 1270px;
     }
@@ -1743,6 +1762,9 @@ a {
 }
 
 @media (max-width:1276px) {
+    .rukovod__items{
+        width: 240px !important;
+    }
     .strParent__items{
         height: 165px !important;
     }
@@ -1854,6 +1876,11 @@ a {
 }
 
 @media (max-width:740px) {
+    .manager{
+        >.descr{
+            flex-wrap: wrap;
+        }
+    }
     .strParent__items{
         height: 140px !important;
        width: 100% !important;
@@ -1929,6 +1956,9 @@ a {
 }
 
 @media (max-width:620px) {
+    .rukovod__items{
+        width: 220px !important;
+    }
     .slick-arrow{
         width: 22px !important;
         height: 34px !important;
@@ -1972,11 +2002,14 @@ a {
 }
 
 @media (max-width:570px) {
+    .rukovod__items{
+        width: 100px !important;
+    }
     .strParent__items{
         height: 125px !important;
     }
     .flexParent__items {
-        width: 199px;
+        width: 150px;
         height: 100% !important;
         max-height: 205px;
         > img{
@@ -1994,7 +2027,7 @@ a {
         height: 115px !important;
     }
     .flexParent__items {
-        width: 179px;
+        width: 100px;
         height: 194px;
     }
     .editorBtn{
