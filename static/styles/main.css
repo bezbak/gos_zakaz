@@ -1093,6 +1093,7 @@ a {
 }
 .manager > .descr > img {
   width: 20%;
+  height: 100%;
 }
 .manager > .name > h1 {
   text-align: center;
