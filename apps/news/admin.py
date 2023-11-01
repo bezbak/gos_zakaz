@@ -18,8 +18,10 @@ class NewsAdminForm(forms.ModelForm, forms.Form):
 class NewsAdmin(TranslationAdmin):
     form = NewsAdminForm
     def save_model(self, request, obj, form, change):
+        obj2 = News.objects.get(id=obj.id)
+        print(obj2)
         for each in form.cleaned_data['images']:
-            Media.objects.create(news=obj, image=each)
+            Media.objects.create(news=obj2, image=each)
         super().save_model(request, obj, form, change)
     
 admin.site.register(News, NewsAdmin)
