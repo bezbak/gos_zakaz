@@ -5,10 +5,10 @@ from apps.team.models import Links, Images, GosLinks
 from apps.team.models import Team
 # Create your views here.
 def index(request):
-    slider_news = News.objects.all().order_by('-id')[:2]
-    month_news = News.objects.all().order_by('-id')[3:7]
-    all_news = News.objects.all()[:20]
-    slider2_news = News.objects.all()[:12]
+    slider_news = News.objects.all().reverse()[:2]
+    month_news = News.objects.all().reverse()[3:7]
+    all_news = News.objects.all().reverse()[:20]
+    slider2_news = News.objects.all().reverse()[:12]
     links = Links.objects.latest('id')
     gos_links = GosLinks.objects.all()
     images = Images.objects.latest('id')
@@ -24,7 +24,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 def all_news(request):
-    news = News.objects.all()
+    news = News.objects.all().reverse()
     links = Links.objects.latest('id')
     gos_links = GosLinks.objects.all()
     context = {
