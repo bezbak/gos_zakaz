@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-21 13:32+0600\n"
+"POT-Creation-Date: 2024-02-27 18:53+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,11 +32,11 @@ msgstr "Загаловок новости"
 msgid "Жаңылыктын сүрөттөлүшү"
 msgstr "Описание новости"
 
-#: .\core\settings.py:117
+#: .\core\settings.py:128
 msgid "Кыргызча"
 msgstr "Киргизский"
 
-#: .\core\settings.py:118
+#: .\core\settings.py:129
 msgid "Орусча"
 msgstr "Русский"
 
@@ -88,7 +88,11 @@ msgstr "Гос. сайты"
 msgid "Байланыштар"
 msgstr "Контакты"
 
-#: .\templates\includes\footer.html:49
+#: .\templates\includes\footer.html:47
+msgid "Ишеним телефону"
+msgstr "Телефон доверия"
+
+#: .\templates\includes\footer.html:53
 msgid "Бардык укуктар корголгон ©2023"
 msgstr "Все права защищены ©2023"
 
